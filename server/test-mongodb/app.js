@@ -17,6 +17,7 @@ module.exports = function(app)
        connectionString += '@ds129024.mlab.com:29024/heroku_sjjr76dr'; // use yours
     }
 
+    //mongodb://admin:admin@ds129024.mlab.com:29024/heroku_sjjr76dr
 
 
 
