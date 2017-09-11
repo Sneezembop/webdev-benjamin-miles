@@ -1,27 +1,11 @@
 
-# Miles' Super Awesome CS5610 project!
-Yaaaaaaaaaaaay
+# CS5610 Web Development
+My name is Miles Benjamin and this is the repository for my Fall 2017 NEU CS5610 Web development class.
 
-## Really psyched this is working now.
-I'm seriously.
+## Links
 
+Heroku:
+https://dashboard.heroku.com/apps/webdev-benjamin-miles
 
-## Dinosaur
-                         .       .
-                        / `.   .' \
-                .---.  <    > <    >  .---.
-                |    \  \ - ~ ~ - /  /    |
-                 ~-..-~             ~-..-~
-             \~~~\.'                    `./~~~/
-              \__/                        \__/
-               /                  .-    .  \
-        _._ _.-    .-~ ~-.       /       }   \/~~~/
-    _.-'q  }~     /       }     {        ;    \__/
-   {'__,  /      (       /      {       /      `. ,~~|   .     .
-    \`''''='~~-.__(      /_      |      /- _      `..-'   \\   //
-                / \   =/  ~~--~~{    ./|    ~-.     `-..__\\_//_.-'
-               {   \  +\         \  =\ (        ~ - . _ _ _..---~
-               |  | {   }         \   \_\
-              '---.o___,'       .o___,'
 
 
