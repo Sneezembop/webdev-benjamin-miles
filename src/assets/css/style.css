@@ -1,3 +1,76 @@
 input {
   margin-bottom: 5px
 }
+
+:root{
+  /*Color Palate*/
+  --main-pri-yellow : #F5891D;
+  --main-sec-yellow : #FFBC13;
+  --main-pri-grey : #856A61;
+  --main-sec-grey : #CEB4A7;
+  --main-pri-dkgrey : #1E160B;
+  --main-sec-dkgrey : #261E0B;
+  --main-pri-red : #A40000;
+  --main-sec-red : #AE0000;
+  --main-pri-black : #0F0802;
+
+
+}
+
+.container-fluid{
+  color: var(--main-sec-yellow);
+  background-color: inherit;
+}
+
+.form-control{
+  color: var(--main-sec-grey);
+  background-color: var(--main-pri-dkgrey);
+}
+
+.navbar{
+  background-color: var(--main-pri-yellow);
+  color: var(--main-pri-dkgrey);
+}
+.navbar-brand.thick{
+  color: var(--main-pri-dkgrey);
+
+}
+.navbar-link{
+  color: var(--main-pri-dkgrey);
+
+}
+
+
+.btn-primary{
+  background-color: var(--main-pri-yellow);
+  color: var(--main-pri-dkgrey);
+  border-color: var(--main-sec-yellow);
+}
+.btn-primary:hover{
+  background-color: var(--main-sec-yellow);
+  color: var(--main-pri-dkgrey);
+  border-color: inherit;
+}
+
+.btn-default{
+  background-color: var(--main-pri-grey);
+}
+
+.btn-default:hover {
+  background-color: var(--main-sec-grey);
+}
+
+.btn-danger{
+  background-color: var(--main-pri-red);
+  color: var(--main-sec-grey);
+}
+
+.btn-danger:hover{
+  background-color: var(--main-sec-red);
+  color: var(--main-sec-grey)
+}
+
+body{
+  color: var(--main-sec-yellow);
+  background-color: var(--main-pri-dkgrey);
+}
