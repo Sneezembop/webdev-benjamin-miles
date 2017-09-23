@@ -71,6 +71,12 @@ input {
 }
 
 body{
+
   color: var(--main-sec-yellow);
   background-color: var(--main-pri-dkgrey);
+}
+
+.page-content{
+  padding-top: 70px;
+
 }
