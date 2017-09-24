@@ -76,7 +76,24 @@ body{
   background-color: var(--main-pri-dkgrey);
 }
 
+.list-group-item{
+  background-color: var(--main-pri-grey);
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.glyphicon{
+  color: var(--main-pri-dkgrey);
+}
+
+.glyphicon-user{
+  color: var(--main-pri-dkgrey);
+}
+
 .page-content{
   padding-top: 70px;
+  padding-bottom: 45px;
 
 }
