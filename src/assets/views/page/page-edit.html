@@ -16,7 +16,7 @@
 
   <script src="../../vendors/jquery/dist/jquery.min.js"></script>
   <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-  <title>New Website</title>
+    <title>Edit Page</title>
 </head>
 <body>
 
@@ -25,11 +25,11 @@
 
     <p class="navbar-Header pull-left">
       <a class="navbar-brand thick">
-        <b>New Website</b>
+        <b>Edit Page</b>
       </a>
     </p>
     <p class="navbar-text pull-right">
-      <a href="website-list.html"
+      <a href="page-list.html"
          class="navbar-link">
         <span class="glyphicon glyphicon-check"></span>
       </a>
@@ -42,23 +42,27 @@
 <div class="container-fluid page-content">
   <form>
     <div class="form-group">
-      <label for="webname">Name</label>
-      <input placeholder="Name"
+      <label for="pagename">Name</label>
+      <input placeholder="THIS IS MY PAGE NAME"
              type="text"
-             id="webname"
+             id="pagename"
              class="form-control"/>
     </div>
   </form>
 
   <form>
     <div class="form-group">
-      <label for="description">Description</label>
-      <textarea rows="5"
-                id="description"
-                class="form-control">Description
-      </textarea>
+      <label for="pagetitle">Title</label>
+      <input placeholder="THIS IS MY PAGE TITLE"
+             type="text"
+             id="pagetitle"
+             class="form-control"/>
     </div>
   </form>
+  <div class="container-fluid">
+  <a class="btn btn-danger btn-block "
+     href="page-list.html" >Delete</a>
+  </div>
 
 
 </div>
