@@ -21,49 +21,103 @@
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-
-    <p class="navbar-Header pull-left">
-      <a class="navbar-brand thick">
-        <b>Edit Website</b>
-      </a>
-    </p>
-    <p class="navbar-text pull-right">
-      <a href="website-list.html"
-         class="navbar-link">
-        <span class="glyphicon glyphicon-check"></span>
-      </a>
-    </p>
+  <div class="container-fluid row">
+    <div class="col-sm-1">
+      <p class="navbar-header pull-left">
+        <a href="website-list.html"
+           class="navbar-link navbar-brand thick">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-2 hidden-xs">
+      <p class="navbar-Header pull-left">
+        <a class="navbar-brand thick">
+          <b>Websites</b>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <p class="navbar-Header pull-left">
+        <a class="navbar-brand thick">
+          <b>Edit Website</b>
+        </a>
+      </p>
+      <p class="navbar-text pull-right">
+        <a href="website-list.html"
+           class="navbar-link">
+          <span class="glyphicon glyphicon-check"></span>
+        </a>
+      </p>
+    </div>
 
   </div>
 </nav>
 
 <!-- body -->
-<div class="container-fluid page-content">
-  <form>
-    <div class="form-group">
-      <label for="webname">Name</label>
-      <input placeholder="THIS IS MY WEBSITE NAME"
-             type="text"
-             id="webname"
-             class="form-control"/>
-    </div>
-  </form>
+<div class="container-fluid page-content row">
+  <div class="col-sm-3 hidden-xs">
+    <ul class="list-group">
+      <li class="list-group-item text-bold row">
+        <a href="../page/page-list.html" class="navbar-link">
+          Website Number 1
+        </a>
+        <a href="website-edit.html" class="navbar-link">
+          <span class="glyphicon glyphicon-cog pull-right"></span>
+        </a>
+      </li>
+      <li class="list-group-item text-bold row">
+        <a href="../page/page-list.html" class="navbar-link">
+          Website Number 1
+        </a>
+        <a href="website-edit.html" class="navbar-link">
+          <span class="glyphicon glyphicon-cog pull-right"></span>
+        </a>
+      </li>
+      <li class="list-group-item text-bold row">
+        <a href="../page/page-list.html" class="navbar-link">
+          Website Number 1
+        </a>
+        <a href="website-edit.html" class="navbar-link">
+          <span class="glyphicon glyphicon-cog pull-right"></span>
+        </a>
+      </li>
+      <li class="list-group-item text-bold row">
+        <a href="../page/page-list.html" class="navbar-link">
+          Website Number 1
+        </a>
+        <a href="website-edit.html" class="navbar-link">
+          <span class="glyphicon glyphicon-cog pull-right"></span>
+        </a>
+      </li>
+    </ul>
 
-  <form>
-    <div class="form-group">
-      <label for="description">Description</label>
-      <textarea rows="5"
-                id="description"
-                class="form-control">THIS IS MY WEBSITE DESCRIPTION
-      </textarea>
-    </div>
-  </form>
-  <div class="container-fluid">
-  <a class="btn btn-danger btn-block "
-     href="website-list.html" >Delete</a>
   </div>
+  <div class="col-sm-9">
+    <form>
+      <div class="form-group">
+        <label for="webname">Name</label>
+        <input placeholder="Name"
+               type="text"
+               id="webname"
+               class="form-control"/>
+      </div>
+    </form>
 
+    <form>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea rows="5"
+                  id="description"
+                  class="form-control">Description
+      </textarea>
+      </div>
+    </form>
+    <div class="container-fluid">
+      <a class="btn btn-danger btn-block "
+         href="website-list.html" >Delete</a>
+    </div>
+  </div>
 
 </div>
 
