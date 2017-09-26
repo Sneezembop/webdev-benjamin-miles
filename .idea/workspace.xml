@@ -25,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget-list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="widget-list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/views/widget/widget-list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
@@ -50,6 +50,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="413">
               <caret line="131" column="31" lean-forward="false" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="website-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/views/website/website-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -81,6 +91,18 @@
             <state relative-caret-position="22">
               <caret line="112" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="84" column="6" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,14 +142,14 @@
         <option value="$PROJECT_DIR$/src/assets/views/page/page-new.html" />
         <option value="$PROJECT_DIR$/src/assets/views/website/website-new.html" />
         <option value="$PROJECT_DIR$/src/assets/views/website/website-edit.html" />
-        <option value="$PROJECT_DIR$/src/assets/views/website/website-list.html" />
-        <option value="$PROJECT_DIR$/src/assets/views/page/page-list.html" />
         <option value="$PROJECT_DIR$/src/assets/views/widget/widget-chooser.html" />
         <option value="$PROJECT_DIR$/src/assets/views/widget/widget-header.html" />
         <option value="$PROJECT_DIR$/src/assets/views/widget/widget-youtube.html" />
         <option value="$PROJECT_DIR$/src/assets/views/widget/widget-image.html" />
         <option value="$PROJECT_DIR$/src/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/assets/views/widget/widget-list.html" />
+        <option value="$PROJECT_DIR$/src/assets/views/website/website-list.html" />
+        <option value="$PROJECT_DIR$/src/assets/views/page/page-list.html" />
       </list>
     </option>
   </component>
@@ -197,6 +219,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
@@ -291,12 +321,12 @@
       <workItem from="1506202597603" duration="3648000" />
       <workItem from="1506266158976" duration="7415000" />
       <workItem from="1506290915438" duration="6190000" />
-      <workItem from="1506449286032" duration="8677000" />
+      <workItem from="1506449286032" duration="8826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41845000" />
+    <option name="totallyTimeSpent" value="41994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
@@ -650,24 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="84" column="6" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/views/website/website-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="81" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/views/website/website-new.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -729,6 +741,24 @@
         <state relative-caret-position="260">
           <caret line="109" column="46" lean-forward="false" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/views/website/website-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="84" column="6" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
