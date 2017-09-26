@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport"
+        content="initial-scale=1.25, user-scalable=no">
+  <meta charset="UTF-8">
+
+
+  <link rel="stylesheet"
+        href="../../vendors/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet"
+        href="../../css/style.css"/>
+
+
+  <script src="../../vendors/jquery/dist/jquery.min.js"></script>
+  <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <title>Edit Widget</title>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+    <div class="col-sm-1">
+      <p class="navbar-header pull-left">
+        <a href="widget-list.html"
+           class="navbar-link navbar-brand">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-2 hidden-xs">
+      <p class="navbar-Header pull-left">
+        <a class="navbar-brand thick">
+          <b>Widgets</b>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-1 hidden-xs">
+      <p class="navbar-Header pull-right">
+        <a href="widget-chooser.html"
+           class="navbar-link navbar-brand thick">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-8">
+      <p class="navbar-Header pull-left">
+        <a class="navbar-brand thick">
+          <b>Edit Widget</b>
+        </a>
+      </p>
+      <p class="navbar-text pull-right">
+        <a href="widget-list.html"
+           class="navbar-link">
+          <span class="glyphicon glyphicon-ok"></span>
+        </a>
+      </p>
+    </div>
+  </div>
+</nav>
+
+<!-- body -->
+<div class="page-content padbodytext container-fluid row">
+  <div class="col-sm-4 hidden-xs vertical-line">
+    <ul class="list-group">
+      <li class="list-group-item borderless"><a href="widget-header.html">Header</a></li>
+      <li class="list-group-item borderless">Label</li>
+      <li class="list-group-item borderless">HTML</li>
+      <li class="list-group-item borderless">Text Input</li>
+      <li class="list-group-item borderless">Link</li>
+      <li class="list-group-item borderless">Button</li>
+      <li class="list-group-item borderless"><a href="widget-image.html">Image</a></li>
+      <li class="list-group-item borderless"><a href="widget-youtube.html">Youtube</a></li>
+      <li class="list-group-item borderless">Data Table</li>
+      <li class="list-group-item borderless">Repeater</li>
+    </ul>
+
+
+  </div>
+  <div class="col-sm-8">
+    <form>
+      <div class="form-group">
+        <label for="headname">Name</label>
+        <input placeholder="Name"
+               type="text"
+               id="headname"
+               class="form-control"/>
+      </div>
+    </form>
+
+    <form>
+      <div class="form-group">
+        <label for="text">Text</label>
+        <input placeholder="The arsonist had oddly shaped feet"
+               type="text"
+               id="text"
+               class="form-control"/>
+      </div>
+    </form>
+
+    <form>
+      <div class="form-group">
+        <label for="url">URL</label>
+        <input placeholder="http://www.youtube.com"
+               type="text"
+               id="url"
+               class="form-control"/>
+      </div>
+    </form>
+    <form>
+      <div class="form-group">
+        <label for="width">Width</label>
+        <input placeholder="2"
+               type="number"
+               id="width"
+               class="form-control"/>
+      </div>
+    </form>
+
+
+    <div class="container-fluid">
+      <a class="btn btn-danger btn-block "
+         href="widget-list.html" >Delete</a>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <a href="../user/profile.html">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+
+</body>
+</html>

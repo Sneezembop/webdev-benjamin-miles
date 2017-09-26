@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport"
+        content="initial-scale=1.25, user-scalable=no">
+  <meta charset="UTF-8">
+
+
+  <link rel="stylesheet"
+        href="../../vendors/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet"
+        href="../../css/style.css"/>
+
+
+  <script src="../../vendors/jquery/dist/jquery.min.js"></script>
+  <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <title>Edit Page</title>
+</head>
+<body>
+<!-- Nav bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+    <div class="col-sm-1">
+      <p class="navbar-header pull-left">
+        <a href="page-list.html"
+           class="navbar-link navbar-brand">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-2 hidden-xs">
+      <p class="navbar-Header pull-left">
+        <a class="navbar-brand thick">
+          <b>Webpages</b>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-1 hidden-xs">
+      <p class="navbar-Header pull-right">
+        <a href="page-new.html"
+           class="navbar-link navbar-brand thick">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-8">
+      <p class="navbar-Header pull-left">
+        <a class="navbar-brand thick">
+          <b>Edit Webpage</b>
+        </a>
+      </p>
+      <p class="navbar-text pull-right">
+        <a href="page-list.html"
+           class="navbar-link">
+          <span class="glyphicon glyphicon-ok"></span>
+        </a>
+      </p>
+    </div>
+  </div>
+</nav>
+
+<!-- body -->
+<div class="container-fluid page-content">
+  <form>
+    <div class="form-group">
+      <label for="pagename">Name</label>
+      <input placeholder="THIS IS MY PAGE NAME"
+             type="text"
+             id="pagename"
+             class="form-control"/>
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="pagetitle">Title</label>
+      <input placeholder="THIS IS MY PAGE TITLE"
+             type="text"
+             id="pagetitle"
+             class="form-control"/>
+    </div>
+  </form>
+  <div class="container-fluid">
+    <a class="btn btn-danger btn-block "
+       href="page-list.html">Delete</a>
+  </div>
+
+
+</div>
+
+
+<!-- Footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <a href="../user/profile.html">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+
+</body>
+</html>
