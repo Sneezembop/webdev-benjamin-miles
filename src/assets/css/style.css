@@ -19,6 +19,7 @@ input {
 }
 
 /*
+
 .container-fluid{
   color: var(--main-sec-yellow);
   background-color: inherit;
@@ -72,14 +73,10 @@ input {
   color: var(--main-sec-grey)
 }
 
-body{
-  height: 100%;
-  color: var(--main-sec-yellow);
-  background-color: var(--main-pri-dkgrey);
-}
+
 
 .list-group-item{
-  background-color: var(--main-pri-grey);
+  background-color: var(--main-pri-dkgrey);
 }
 
 .text-bold{
@@ -93,11 +90,29 @@ body{
 .glyphicon-user{
   color: var(--main-pri-dkgrey);
 }
-
 */
+
+
+body{
+  height: 100%;
+
+  /*
+  color: var(--main-sec-yellow);
+  background-color: var(--main-pri-dkgrey);
+
+  */
+}
+
+html{
+  height:100%;
+}
+
+
+
 .page-content{
   padding-top: 70px;
   padding-bottom: 55px;
+  height: 100%;
 
 }
 .padbodytext{
@@ -107,4 +122,14 @@ body{
 
 .nowrap{
   display: inline;
+}
+.borderless{
+  border: 0 none;
+}
+
+.vertical-line{
+  border-right: 1px;
+  border-right-style: solid;
+  border-color: lightgray;
+  height:100%;
 }
