@@ -16,25 +16,46 @@
 
   <script src="../../vendors/jquery/dist/jquery.min.js"></script>
   <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <title>Edit Page</title>
+  <title>Edit Page</title>
 </head>
 <body>
-
+<!-- Nav bar -->
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-
-    <p class="navbar-Header pull-left">
-      <a class="navbar-brand thick">
-        <b>Edit Page</b>
-      </a>
-    </p>
-    <p class="navbar-text pull-right">
-      <a href="page-list.html"
-         class="navbar-link">
-        <span class="glyphicon glyphicon-check"></span>
-      </a>
-    </p>
-
+  <div class="container-fluid row">
+    <div class="col-sm-1">
+      <p class="navbar-header pull-left">
+        <a href="page-list.html"
+           class="navbar-link navbar-brand thick">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-2 hidden-xs">
+      <p class="navbar-Header pull-left">
+        <a class="navbar-brand thick">
+          <b>Webpages</b>
+        </a>
+      </p>
+      <p class="navbar-Header">
+        <a href="page-new.html"
+           class="navbar-link navbar-brand thick">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <p class="navbar-Header pull-left">
+        <a class="navbar-brand thick">
+          <b>Edit Webpage</b>
+        </a>
+      </p>
+      <p class="navbar-text pull-right">
+        <a href="page-list.html"
+           class="navbar-link">
+          <span class="glyphicon glyphicon-check"></span>
+        </a>
+      </p>
+    </div>
   </div>
 </nav>
 
@@ -60,8 +81,8 @@
     </div>
   </form>
   <div class="container-fluid">
-  <a class="btn btn-danger btn-block "
-     href="page-list.html" >Delete</a>
+    <a class="btn btn-danger btn-block "
+       href="page-list.html">Delete</a>
   </div>
 
 

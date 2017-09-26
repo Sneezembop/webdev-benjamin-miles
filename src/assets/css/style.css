@@ -2,6 +2,7 @@ input {
   margin-bottom: 5px
 }
 
+
 :root{
   /*Color Palate*/
   --main-pri-yellow : #F5891D;
@@ -17,6 +18,7 @@ input {
 
 }
 
+/*
 .container-fluid{
   color: var(--main-sec-yellow);
   background-color: inherit;
@@ -71,7 +73,7 @@ input {
 }
 
 body{
-
+  height: 100%;
   color: var(--main-sec-yellow);
   background-color: var(--main-pri-dkgrey);
 }
@@ -92,7 +94,7 @@ body{
   color: var(--main-pri-dkgrey);
 }
 
-
+*/
 .page-content{
   padding-top: 70px;
   padding-bottom: 55px;
@@ -101,4 +103,8 @@ body{
 .padbodytext{
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.nowrap{
+  display: inline;
 }
