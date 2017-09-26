@@ -25,11 +25,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget-list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="widget-list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/views/widget/widget-list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
               <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="103" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -75,16 +85,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget-chooser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assets/views/widget/widget-chooser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="58" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="widget-header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/views/widget/widget-header.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,14 +95,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="page-new.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-new.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="62" column="52" lean-forward="false" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="page-list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="84" column="6" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="256">
+              <caret line="85" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,8 +146,6 @@
         <option value="$PROJECT_DIR$/src/assets/views/user/profile.html" />
         <option value="$PROJECT_DIR$/src/assets/views/user/login.html" />
         <option value="$PROJECT_DIR$/src/assets/index.html" />
-        <option value="$PROJECT_DIR$/src/assets/views/page/page-edit.html" />
-        <option value="$PROJECT_DIR$/src/assets/views/page/page-new.html" />
         <option value="$PROJECT_DIR$/src/assets/views/website/website-new.html" />
         <option value="$PROJECT_DIR$/src/assets/views/website/website-edit.html" />
         <option value="$PROJECT_DIR$/src/assets/views/widget/widget-chooser.html" />
@@ -150,6 +156,8 @@
         <option value="$PROJECT_DIR$/src/assets/views/website/website-list.html" />
         <option value="$PROJECT_DIR$/src/assets/views/page/page-list.html" />
         <option value="$PROJECT_DIR$/src/assets/views/widget/widget-list.html" />
+        <option value="$PROJECT_DIR$/src/assets/views/page/page-edit.html" />
+        <option value="$PROJECT_DIR$/src/assets/views/page/page-new.html" />
       </list>
     </option>
   </component>
@@ -321,12 +329,12 @@
       <workItem from="1506202597603" duration="3648000" />
       <workItem from="1506266158976" duration="7415000" />
       <workItem from="1506290915438" duration="6190000" />
-      <workItem from="1506449286032" duration="9011000" />
+      <workItem from="1506449286032" duration="9447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42179000" />
+    <option name="totallyTimeSpent" value="42615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
@@ -664,22 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/views/website/website-new.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -736,16 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="84" column="6" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/views/website/website-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -758,6 +740,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/views/page/page-new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="62" column="52" lean-forward="false" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
           <folding />
         </state>
       </provider>
