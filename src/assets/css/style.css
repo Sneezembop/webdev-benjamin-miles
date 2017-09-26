@@ -111,7 +111,7 @@ html{
 
 .page-content{
   padding-top: 70px;
-  padding-bottom: 55px;
+  padding-bottom: 70px;
   height: 100%;
 
 }
@@ -132,4 +132,18 @@ html{
   border-right-style: solid;
   border-color: lightgray;
   height:100%;
+}
+
+
+.mb-glyph-toolbar{
+  position: absolute;
+  right: 0px;
+  background-color: gray;
+  padding: 7px;
+  border-bottom-left-radius: 10px;
+  opacity: 0.5;
+}
+
+.mb-widget-spacing{
+ padding-bottom: 25px;
 }
