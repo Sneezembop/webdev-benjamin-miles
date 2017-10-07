@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Route, RouterLink} from '@angular/router';
 
 
 
@@ -11,11 +12,13 @@ import {Component, Input, OnInit} from '@angular/core';
 export class SimpleHeaderComponent implements OnInit {
   @Input()
   headerName: string;
+
+  @Input()
   okLink: string;
 
   constructor() {
     this.headerName = 'test';
-    this.okLink = 'test';
+    this.okLink = 'profile';
   }
 
   ngOnInit() {}

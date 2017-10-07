@@ -13,6 +13,7 @@ import { ProfileComponent } from './views/user/profile/profile.component';
 import { RegisterComponent } from './views/user/register/register.component';
 import { SimpleHeaderComponent } from './views/sharedComponents/simple-header/simple-header.component';
 import { SimpleFooterComponent } from './views/sharedComponents/simple-footer/simple-footer.component';
+import { WebsiteListComponent } from './views/website/website-list/website-list.component';
 
 @NgModule({
   // Declare components here
@@ -24,7 +25,8 @@ import { SimpleFooterComponent } from './views/sharedComponents/simple-footer/si
     ProfileComponent,
     RegisterComponent,
     SimpleHeaderComponent,
-    SimpleFooterComponent
+    SimpleFooterComponent,
+    WebsiteListComponent
   ],
   imports: [
     BrowserModule,
