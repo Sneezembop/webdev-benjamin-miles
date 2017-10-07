@@ -11,6 +11,8 @@ import {TestService} from './services/test.service.client';
 import { LoginComponent } from './views/user/login/login.component';
 import { ProfileComponent } from './views/user/profile/profile.component';
 import { RegisterComponent } from './views/user/register/register.component';
+import { SimpleHeaderComponent } from './views/sharedComponents/simple-header/simple-header.component';
+import { SimpleFooterComponent } from './views/sharedComponents/simple-footer/simple-footer.component';
 
 @NgModule({
   // Declare components here
@@ -20,7 +22,9 @@ import { RegisterComponent } from './views/user/register/register.component';
     TestComponent,
     LoginComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    SimpleHeaderComponent,
+    SimpleFooterComponent
   ],
   imports: [
     BrowserModule,
