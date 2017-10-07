@@ -15,6 +15,7 @@ import { SimpleHeaderComponent } from './views/sharedComponents/simple-header/si
 import { SimpleFooterComponent } from './views/sharedComponents/simple-footer/simple-footer.component';
 import { WebsiteListComponent } from './views/website/website-list/website-list.component';
 import { WebsiteHomeComponent } from './views/website/website-home/website-home.component';
+import { LandscapeHeaderComponent } from './views/sharedComponents/landscape-header/landscape-header.component';
 
 @NgModule({
   // Declare components here
@@ -28,7 +29,8 @@ import { WebsiteHomeComponent } from './views/website/website-home/website-home.
     SimpleHeaderComponent,
     SimpleFooterComponent,
     WebsiteListComponent,
-    WebsiteHomeComponent
+    WebsiteHomeComponent,
+    LandscapeHeaderComponent
   ],
   imports: [
     BrowserModule,
