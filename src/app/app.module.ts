@@ -14,6 +14,7 @@ import { RegisterComponent } from './views/user/register/register.component';
 import { SimpleHeaderComponent } from './views/sharedComponents/simple-header/simple-header.component';
 import { SimpleFooterComponent } from './views/sharedComponents/simple-footer/simple-footer.component';
 import { WebsiteListComponent } from './views/website/website-list/website-list.component';
+import { WebsiteHomeComponent } from './views/website/website-home/website-home.component';
 
 @NgModule({
   // Declare components here
@@ -26,7 +27,8 @@ import { WebsiteListComponent } from './views/website/website-list/website-list.
     RegisterComponent,
     SimpleHeaderComponent,
     SimpleFooterComponent,
-    WebsiteListComponent
+    WebsiteListComponent,
+    WebsiteHomeComponent
   ],
   imports: [
     BrowserModule,

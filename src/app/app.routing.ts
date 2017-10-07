@@ -9,6 +9,7 @@ import {TestComponent} from './components/test/test.component';
 import {LoginComponent} from './views/user/login/login.component';
 import {RegisterComponent} from './views/user/register/register.component';
 import {ProfileComponent} from './views/user/profile/profile.component';
+import {WebsiteHomeComponent} from './views/website/website-home/website-home.component';
 
 
 
@@ -17,7 +18,8 @@ const APP_ROUTES: Routes = [
   {path: 'test', component: TestComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'profile', component: ProfileComponent}
+  {path: 'profile', component: ProfileComponent},
+  {path: 'website', component: WebsiteHomeComponent}
 ];
 
 // Export the routes as module providers
