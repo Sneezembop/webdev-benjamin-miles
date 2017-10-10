@@ -26,15 +26,17 @@ export class ProfileComponent implements OnInit {
       .subscribe(
         (params: any) => {
           this.userId = params['uid'];
+          this.user = this.userService.findUserById(this.userId);
+          // console.log(this.user);
+
+          this.username = this.user['username'];
+          this.email = 'nothing@nothing.org';
+          this.fname = this.user['firstName'];
+          this.lname = this.user['lastName'];
         }
       );
 
-    this.user = this.userService.findUserById(this.userId);
 
-    this.username = this.user['username'];
-    this.email = 'nothing@nothing.org';
-    this.fname = this.user['firstName'];
-    this.lname = this.user['lastName'];
 
 
   }

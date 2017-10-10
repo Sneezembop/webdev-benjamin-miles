@@ -29,6 +29,7 @@ export class RegisterComponent implements OnInit {
     this.username = this.loginForm.value.username;
     this.password = this.loginForm.value.password;
     this.vfpassword = this.loginForm.value.vfpassword;
+    // alert(this.username + ' ' + this.password);
 
     const tempuser = this.userService.findUserByUsername(this.username);
 
