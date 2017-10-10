@@ -16,6 +16,19 @@ import { SimpleFooterComponent } from './views/sharedComponents/simple-footer/si
 import { WebsiteListComponent } from './views/website/website-list/website-list.component';
 import { WebsiteHomeComponent } from './views/website/website-home/website-home.component';
 import { LandscapeHeaderComponent } from './views/sharedComponents/landscape-header/landscape-header.component';
+import {UserService} from './services/user.service.client';
+import {WebsiteService} from './services/website.service.client';
+import {PageService} from './services/page.service.client';
+import {WidgetService} from './services/widget.service.client';
+import { WebsiteNewComponent } from './views/website/website-new/website-new.component';
+import { WebsiteEditComponent } from './views/website/website-edit/website-edit.component';
+import { PageHomeComponent } from './views/page/page-home/page-home.component';
+import { PageListComponent } from './views/page/page-list/page-list.component';
+import { PageNewComponent } from './views/page/page-new/page-new.component';
+import { PageEditComponent } from './views/page/page-edit/page-edit.component';
+import { WidgetHomeComponent } from './views/widget/widget-home/widget-home.component';
+import { WidgetNewComponent } from './views/widget/widget-new/widget-new.component';
+import { WidgetEditComponent } from './views/widget/widget-edit/widget-edit.component';
 
 @NgModule({
   // Declare components here
@@ -30,7 +43,16 @@ import { LandscapeHeaderComponent } from './views/sharedComponents/landscape-hea
     SimpleFooterComponent,
     WebsiteListComponent,
     WebsiteHomeComponent,
-    LandscapeHeaderComponent
+    LandscapeHeaderComponent,
+    WebsiteNewComponent,
+    WebsiteEditComponent,
+    PageHomeComponent,
+    PageListComponent,
+    PageNewComponent,
+    PageEditComponent,
+    WidgetHomeComponent,
+    WidgetNewComponent,
+    WidgetEditComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +61,7 @@ import { LandscapeHeaderComponent } from './views/sharedComponents/landscape-hea
     Routing
   ],
   // Client Side services here
-  providers: [ TestService],
+  providers: [TestService, UserService, WebsiteService, PageService, WidgetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

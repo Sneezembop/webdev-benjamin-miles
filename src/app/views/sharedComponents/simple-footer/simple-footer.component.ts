@@ -10,7 +10,7 @@ export class SimpleFooterComponent implements OnInit {
   @Input()
   profileLink: string;
   constructor() {
-    this.profileLink = '../profile';
+    this.profileLink = '../';
   }
 
   ngOnInit() {
