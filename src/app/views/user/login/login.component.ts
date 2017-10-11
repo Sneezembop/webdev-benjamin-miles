@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     const tempuser = this.userService.findUserByUsername(this.username);
 
     if ((tempuser !== null) && (tempuser.password === this.password)) {
-      alert(tempuser._id + ' ' + tempuser.username + ' ' + tempuser.password + ' ');
+      // alert(tempuser._id + ' ' + tempuser.username + ' ' + tempuser.password + ' ');
       this.router.navigate(['user/', tempuser._id]);
     } else {
       this.errorFlag = true;
