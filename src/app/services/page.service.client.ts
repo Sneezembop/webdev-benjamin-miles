@@ -27,8 +27,9 @@ export class PageService {
   };
 
 
-  createPage(websiteId, page) {
-    page.developerId = websiteId;
+  createPage(userId, page) {
+    page.developerId = userId;
+    page._id = '' + Math.ceil((Math.random() * 1000));
     this.pages.push(page);
     return page;
   }

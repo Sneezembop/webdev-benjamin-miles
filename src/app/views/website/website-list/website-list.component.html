@@ -1,36 +1,16 @@
-<div class="page-content padbodytext">
+<div class="">
   <ul class="list-group">
-    <li class="list-group-item borderless text-bold">
-      <a href="../page/page-list.html" class="navbar-link">
-        Website Number 1
-      </a>
-      <a href="website-edit.html" class="navbar-link">
-        <span class="glyphicon glyphicon-cog pull-right"></span>
-      </a>
-    </li>
-    <li class="list-group-item borderless text-bold">
-      <a href="../page/page-list.html" class="navbar-link">
-        Website Number 2
-      </a>
-      <a href="website-edit.html" class="navbar-link">
-        <span class="glyphicon glyphicon-cog pull-right"></span>
-      </a>
-    </li>
-    <li class="list-group-item borderless text-bold">
-      <a href="../page/page-list.html" class="navbar-link">
-        Website Number 3
-      </a>
-      <a href="website-edit.html" class="navbar-link">
-        <span class="glyphicon glyphicon-cog pull-right"></span>
-      </a>
-    </li>
-    <li class="list-group-item borderless text-bold">
-      <a href="../page/page-list.html" class="navbar-link">
-        Website Number 4
-      </a>
-      <a href="website-edit.html" class="navbar-link">
-        <span class="glyphicon glyphicon-cog pull-right"></span>
-      </a>
-    </li>
+
+    <div *ngFor="let website of websites">
+      <li class="list-group-item borderless text-bold">
+        <a routerLink="./{{website._id}}/page" class="navbar-link">
+          {{website.name}}
+        </a>
+        <a routerLink="./{{website._id}}" class="navbar-link">
+          <span class="glyphicon glyphicon-cog pull-right"></span>
+        </a>
+      </li>
+    </div>
+
   </ul>
 </div>
