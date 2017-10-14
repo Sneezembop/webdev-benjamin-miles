@@ -1,3 +1,62 @@
-<p>
-  widget-image works!
-</p>
+
+  <div class="form-group">
+    <label for="headname">Name</label>
+    <input value = [(widget.name)]
+           type="text"
+           id="headname"
+           name="name"
+           ngModel
+           required
+           [(ngModel)]="widget.name"
+           #formwidgetname="ngModel"
+           class="form-control"/>
+
+    <label for="text">Text</label>
+    <input value = [(widget.text)]
+           type="text"
+           id="text"
+           name="text"
+           ngModel
+           required
+           [(ngModel)]="widget.text"
+           #formwidgettext="ngModel"
+           class="form-control"/>
+
+    <label for="url">URL</label>
+    <input value = [(widget.url)]
+           type="text"
+           id="url"
+           name="url"
+           ngModel
+           required
+           [(ngModel)]="widget.url"
+           #formwidgeturl="ngModel"
+           class="form-control"/>
+
+    <label for="width">Width</label>
+    <input value = [(widget.width)]
+           type="text"
+           id="width"
+           name="width"
+           ngModel
+           required
+           [(ngModel)]="widget.width"
+           #formwidgetname="ngModel"
+           class="form-control"/>
+
+    <label for="file">Upload File</label>
+    <input value = [(widget.file)]
+           type="file"
+           id="file"
+           name="file"
+           ngModel
+           required
+           [(ngModel)]="widget.file"
+           #formwidgetfile="ngModel"
+           class="form-control"/>
+  </div>
+
+
+  <a class="btn btn-primary btn-block"
+     (clicl)="uploadFile()" >Upload File</a>
+

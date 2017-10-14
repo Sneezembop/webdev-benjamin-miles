@@ -17,7 +17,7 @@ export class WidgetService {
     {_id: '234', type: 'HEADER', pageId: '321', size: 4, text: 'Extra Header'},
     {
       _id: '345', type: 'IMAGE', pageId: '321', width: '100%',
-      url: 'http://lorempixel.com/400/200/'
+      url: 'https://i.pinimg.com/736x/1b/15/ff/1b15ff0748697cc44048a0d84f5a2f93--rick-and-morty-fondos-rick-and-morty-fanart.jpg'
     },
     {_id: '456', type: 'HTML', pageId: '321', text: '<p>Lorem ipsum</p>'},
     {_id: '567', type: 'HEADER', pageId: '321', size: 5, text: 'Other Header'},
