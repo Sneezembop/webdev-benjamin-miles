@@ -19,7 +19,7 @@ export class WidgetNewComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private widgetService: WidgetService, private router: Router) { }
 
   ngOnInit() {
-    this.widget = [{}];
+    this.widget = {};
     this.widget.type = 'YOUTUBE';
     this.activatedRoute.params
       .subscribe(
@@ -27,11 +27,13 @@ export class WidgetNewComponent implements OnInit {
           this.userId = params['uid'];
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
+          this.widget.pageId = this.pageId;
         }
       );
   }
 
   createWidget() {
+    alert(this.widget.name + ' ' + this.widget.pageId);
     this.widgetService.createWidget(this.pageId, this.widget);
     this.router.navigate(
       ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);

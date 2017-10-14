@@ -13,17 +13,17 @@ export class WidgetService {
   }
 
   widgets = [
-    {_id: '123', type: 'HEADING', pageId: '321', size: 2, text: 'GIZMODO'},
-    {_id: '234', type: 'HEADING', pageId: '321', size: 4, text: 'Lorem ipsum'},
+    {_id: '123', type: 'HEADER', pageId: '321', size: 2, text: 'GIZMODO'},
+    {_id: '234', type: 'HEADER', pageId: '321', size: 4, text: 'Extra Header'},
     {
       _id: '345', type: 'IMAGE', pageId: '321', width: '100%',
       url: 'http://lorempixel.com/400/200/'
     },
     {_id: '456', type: 'HTML', pageId: '321', text: '<p>Lorem ipsum</p>'},
-    {_id: '567', type: 'HEADING', pageId: '321', size: 4, text: 'Lorem ipsum'},
+    {_id: '567', type: 'HEADER', pageId: '321', size: 5, text: 'Other Header'},
     {
       _id: '678', type: 'YOUTUBE', pageId: '321', width: '100%',
-      url: 'https://youtu.be/AM2Ivdi9c4E'
+      url: 'https://www.youtube.com/embed/GI6CfKcMhjY'
     },
     {_id: '789', type: 'HTML', pageId: '321', text: '<p>Lorem ipsum</p>'}
   ];
@@ -40,6 +40,7 @@ export class WidgetService {
     widget.pageId = pageId;
     widget._id = '' + Math.ceil((Math.random() * 1000));
     this.widgets.push(widget);
+    // console.log(this.widgetListToString(pageId));
     return widget;
   }
 
@@ -75,6 +76,16 @@ export class WidgetService {
         this.widgets.splice(x, 1);
       }
     }
+  }
+
+  widgetListToString(pageId) {
+    let myString = '';
+    for (let x = 0; x < this.widgets.length; x++) {
+      if (this.widgets[x].pageId === pageId) {
+        myString += this.widgets[x]._id + ' ' + this.widgets[x].type + '\n';
+      }
+    }
+    return myString;
   }
 
 }

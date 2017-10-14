@@ -35,6 +35,8 @@ import { WidgetHeaderComponent } from './views/widget/widget-header/widget-heade
 import { WidgetImageComponent } from './views/widget/widget-image/widget-image.component';
 import { WidgetYoutubeComponent } from './views/widget/widget-youtube/widget-youtube.component';
 import { WidgetDispHeaderComponent } from './views/widget/widget-disp-header/widget-disp-header.component';
+import { WidgetDispYoutubeComponent } from './views/widget/widget-disp-youtube/widget-disp-youtube.component';
+import { WidgetDispImageComponent } from './views/widget/widget-disp-image/widget-disp-image.component';
 
 @NgModule({
   // Declare components here
@@ -64,7 +66,9 @@ import { WidgetDispHeaderComponent } from './views/widget/widget-disp-header/wid
     WidgetHeaderComponent,
     WidgetImageComponent,
     WidgetYoutubeComponent,
-    WidgetDispHeaderComponent
+    WidgetDispHeaderComponent,
+    WidgetDispYoutubeComponent,
+    WidgetDispImageComponent
   ],
   imports: [
     BrowserModule,

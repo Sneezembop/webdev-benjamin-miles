@@ -1,18 +1,18 @@
-<app-simple-header></app-simple-header>
+<app-simple-header headerName="Widgets" okLink="new" glyphType="plus"></app-simple-header>
 <div class="padbodytext page-content">
 <div *ngFor="let widget of widgets">
 <div [ngSwitch]="widget.type">
 
-  <div *ngSwitchCase="'HEADING'">
+  <div *ngSwitchCase="'HEADER'">
     <app-widget-disp-header [widget]='widget' ></app-widget-disp-header>
   </div>
 
   <div *ngSwitchCase="'IMAGE'">
-    <app-widget-image widget='widget'></app-widget-image>
+    <app-widget-disp-image widget='widget'></app-widget-disp-image>
   </div>
 
   <div *ngSwitchCase="'YOUTUBE'">
-    <app-widget-youtube widget='widget'></app-widget-youtube>
+    <app-widget-disp-youtube [widget]='widget'></app-widget-disp-youtube>
   </div>
 </div>
 </div>
