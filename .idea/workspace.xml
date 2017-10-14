@@ -18,11 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="simple-header.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="simple-header.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget-edit.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="65" lean-forward="true" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -112,10 +122,10 @@
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-new/widget-new.component.html" />
-        <option value="$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-image/widget-image.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-image/widget-image.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.html" />
       </list>
     </option>
   </component>
@@ -368,12 +378,12 @@
       <workItem from="1507394657951" duration="9470000" />
       <workItem from="1507645011333" duration="21340000" />
       <workItem from="1507907186643" duration="10553000" />
-      <workItem from="1507935104196" duration="23997000" />
+      <workItem from="1507935104196" duration="24274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117779000" />
+    <option name="totallyTimeSpent" value="118056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="254" y="16" width="1368" height="721" extended-state="6" />
@@ -810,14 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="67" lean-forward="true" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-new/widget-new.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -862,6 +864,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="65" lean-forward="true" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
           <folding />
         </state>
       </provider>
