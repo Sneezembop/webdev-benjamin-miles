@@ -18,41 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="widget-image.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-image/widget-image.component.ts">
+      <file leaf-file-name="simple-header.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="67" lean-forward="false" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widget-youtube.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-youtube/widget-youtube.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widget-image.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-image/widget-image.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1116">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widget-youtube.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-youtube/widget-youtube.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="31" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="72">
+              <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -95,7 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/views/user/register/register.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/user/register/register.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/user/profile/profile.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/website/website-list/website-list.component.ts" />
@@ -146,6 +115,7 @@
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-image/widget-image.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-image/widget-image.component.html" />
+        <option value="$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html" />
       </list>
     </option>
   </component>
@@ -230,6 +200,23 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="sharedComponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="sharedComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="simple-header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
@@ -381,12 +368,12 @@
       <workItem from="1507394657951" duration="9470000" />
       <workItem from="1507645011333" duration="21340000" />
       <workItem from="1507907186643" duration="10553000" />
-      <workItem from="1507935104196" duration="23630000" />
+      <workItem from="1507935104196" duration="23997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117412000" />
+    <option name="totallyTimeSpent" value="117779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="254" y="16" width="1368" height="721" extended-state="6" />
@@ -445,14 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/views/website/website-home/website-home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views/website/website-home/website-home.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -847,6 +826,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-image/widget-image.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-youtube/widget-youtube.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-youtube/widget-youtube.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -863,18 +858,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-youtube/widget-youtube.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-image/widget-image.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="72">
+          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
           <folding />
         </state>
       </provider>
