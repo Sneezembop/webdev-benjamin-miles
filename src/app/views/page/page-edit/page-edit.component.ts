@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {NgForm} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {PageService} from '../../../services/page.service.client';
 
 
 @Component({
@@ -8,8 +11,44 @@ import { Component, OnInit } from '@angular/core';
     '../../css/style.css']
 })
 export class PageEditComponent implements OnInit {
-  constructor() { }
+  @ViewChild('f') submitForm: NgForm;
+
+  userId: string;
+  websiteId: string;
+  pageId: string;
+  errorFlag: boolean;
+  errorMsg: string;
+  pagename: string;
+  description: string;
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute,
+              private pageService: PageService) { }
 
   ngOnInit() {
+    this.activatedRoute.params
+      .subscribe(
+        (params: any) => {
+          this.userId = params['uid'];
+          this.websiteId = params['wid'];
+          this.pageId = params['pid'];
+          const page = this.pageService.findPageById(this.pageId);
+          this.pagename = page.name;
+          this.description = page.description;
+        }
+      );
+
+  }
+
+  updatePage() {
+    this.pagename = this.submitForm.value.webname;
+    this.description = this.submitForm.value.description;
+    const tempPage = { _id: this.pageId, name: this.pagename,
+      websiteId: this.websiteId, description: this.description };
+    this.pageService.updatePage(this.pageId, tempPage);
+    this.router.navigate(['../']);
+  }
+  deletePage() {
+    this.pageService.deletePage(this.pageId);
+    this.router.navigate(['../']);
   }
 }
