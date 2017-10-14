@@ -1,3 +1,20 @@
-<p>
-  widget-home works!
-</p>
+<app-simple-header></app-simple-header>
+<div class="padbodytext page-content">
+<div *ngFor="let widget of widgets">
+<div [ngSwitch]="widget.type">
+
+  <div *ngSwitchCase="'HEADING'">
+    <app-widget-disp-header [widget]='widget' ></app-widget-disp-header>
+  </div>
+
+  <div *ngSwitchCase="'IMAGE'">
+    <app-widget-image widget='widget'></app-widget-image>
+  </div>
+
+  <div *ngSwitchCase="'YOUTUBE'">
+    <app-widget-youtube widget='widget'></app-widget-youtube>
+  </div>
+</div>
+</div>
+</div>
+<app-simple-footer></app-simple-footer>

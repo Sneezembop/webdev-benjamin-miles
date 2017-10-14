@@ -5,23 +5,26 @@
       <app-widget-chooser></app-widget-chooser>
 
     </div>
+    <div class="col-sm-8">
+    <div [ngSwitch]="widget.type">
 
-    <div [ngSwitch]="widget['type']">
-
-      <div *ngSwitchCase='HEADING'>
-        <app-widget-header></app-widget-header>
+      <div *ngSwitchCase="'HEADING'">
+        <app-widget-header [widget]='widget'></app-widget-header>
       </div>
 
-      <div *ngSwitchCase='IMAGE'>
-        <app-widget-image></app-widget-image>
+      <div *ngSwitchCase="'IMAGE'">
+        <app-widget-image widget='widget'></app-widget-image>
       </div>
 
-      <div *ngSwitchCase='YOUTUBE'>
-        <app-widget-youtube></app-widget-youtube>
+      <div *ngSwitchCase="'YOUTUBE'">
+        <app-widget-youtube widget='widget'></app-widget-youtube>
       </div>
 
     </div>
-
+      <button class="btn btn-danger btn-block "
+              (click)='deleteWidget()'>Delete
+      </button>
+    </div>
   </div>
 </form>
 <app-simple-footer></app-simple-footer>

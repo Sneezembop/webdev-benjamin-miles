@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-widget-header',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./widget-header.component.css', '../../css/style.css']
 })
 export class WidgetHeaderComponent implements OnInit {
+  @Input()
+  widget: any;
 
   constructor() { }
 

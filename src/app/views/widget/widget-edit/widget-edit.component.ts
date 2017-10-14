@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {WidgetService} from '../../../services/widget.service.client';
 
 @Component({
@@ -8,14 +8,14 @@ import {WidgetService} from '../../../services/widget.service.client';
   styleUrls: ['./widget-edit.component.css', '../../css/style.css']
 })
 export class WidgetEditComponent implements OnInit {
-  widget: object;
+  widget: any;
   userId: string;
   websiteId: string;
   pageId: string;
   widgetType: string;
   widgetId: string;
 
-  constructor(private activatedRoute: ActivatedRoute, private widgetService: WidgetService) { }
+  constructor(private activatedRoute: ActivatedRoute, private widgetService: WidgetService, private router: Router) { }
 
   ngOnInit() {
     this.activatedRoute.params
@@ -26,14 +26,22 @@ export class WidgetEditComponent implements OnInit {
           this.pageId = params['pid'];
           this.widgetId = params['wgid'];
           this.widget = this.widgetService.findWidgetById(this.widgetId);
-          this.widgetType = this.widget['type'];
+          this.widgetType = this.widget.type;
+          console.log(this.widgetType);
         }
       );
   }
 
   updateWidget() {
+    this.widgetService.updateWidget(this.widgetId, this.widget);
+    this.router.navigate(
+      ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
   }
 
-  deleteWidget() { }
+  deleteWidget() {
+    this.widgetService.deleteWidget(this.widgetId);
+    this.router.navigate(
+      ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+  }
 
 }
