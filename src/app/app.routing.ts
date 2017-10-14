@@ -14,10 +14,11 @@ import {WebsiteNewComponent} from './views/website/website-new/website-new.compo
 import {WebsiteEditComponent} from './views/website/website-edit/website-edit.component';
 import {WidgetNewComponent} from './views/widget/widget-new/widget-new.component';
 import {WidgetHomeComponent} from './views/widget/widget-home/widget-home.component';
+import {WidgetEditComponent} from './views/widget/widget-edit/widget-edit.component';
 import {PageEditComponent} from './views/page/page-edit/page-edit.component';
 import {PageNewComponent} from './views/page/page-new/page-new.component';
 import {PageHomeComponent} from './views/page/page-home/page-home.component';
-import {WidgetEditComponent} from './views/widget/widget-edit/widget-edit.component';
+
 
 
 

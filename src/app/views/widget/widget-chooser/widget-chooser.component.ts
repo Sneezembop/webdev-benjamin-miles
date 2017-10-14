@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -7,9 +7,13 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./widget-chooser.component.css', '../../css/style.css']
 })
 export class WidgetChooserComponent implements OnInit {
+  @Input()
+    widget: any;
+
   userId: string;
   websiteId: string;
   pageId: string;
+
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
@@ -25,9 +29,8 @@ export class WidgetChooserComponent implements OnInit {
   }
 
   navigateToNew(widgetType: string) {
-    this.router.navigate(
-      ['/user', this.userId, 'website',
-        this.websiteId, 'page', this.pageId, 'widget', 'new', {wT: widgetType}]);
+    this.widget.type = widgetType;
+    console.log(widgetType);
   }
 
 }

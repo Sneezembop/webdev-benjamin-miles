@@ -19,7 +19,8 @@ export class WidgetNewComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private widgetService: WidgetService, private router: Router) { }
 
   ngOnInit() {
-    this.widget.type = this.widgetType;
+    this.widget = [{}];
+    this.widget.type = 'YOUTUBE';
     this.activatedRoute.params
       .subscribe(
         (params: any) => {

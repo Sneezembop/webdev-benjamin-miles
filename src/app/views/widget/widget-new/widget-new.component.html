@@ -1,14 +1,14 @@
 <form (ngSubmit)="createWidget()" #f="ngForm">
-  <app-landscape-header mainHeader="Widgets" subHeader="Edit Widget"></app-landscape-header>
+  <app-landscape-header mainHeader="Widgets" subHeader="New Widget"></app-landscape-header>
   <div class="container-fluid page-content padbodytext row">
     <div class="col-sm-4 hidden-xs vertical-line">
-      <app-widget-chooser></app-widget-chooser>
+      <app-widget-chooser [widget]='widget'></app-widget-chooser>
 
     </div>
     <div class="col-sm-8">
       <div [ngSwitch]="widget.type">
 
-        <div *ngSwitchCase="'HEADING'">
+        <div *ngSwitchCase="'HEADER'">
           <app-widget-header [widget]='widget'></app-widget-header>
         </div>
 
