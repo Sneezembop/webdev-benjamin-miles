@@ -1,3 +1,16 @@
-<p>
-  page-list works!
-</p>
+<div class="">
+  <ul class="list-group">
+
+    <div *ngFor="let page of pages">
+      <li class="list-group-item borderless text-bold">
+        <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{page._id}}/widget" class="navbar-link">
+          {{page.name}}
+        </a>
+        <a routerLink="/user/{{userId}}/website/{{websiteId}}/page/{{page._id}}" class="navbar-link">
+          <span class="glyphicon glyphicon-cog pull-right"></span>
+        </a>
+      </li>
+    </div>
+
+  </ul>
+</div>

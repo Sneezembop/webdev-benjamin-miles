@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-simple-footer',
@@ -7,13 +8,19 @@ import {Component, Input, OnInit} from '@angular/core';
     '../../css/style.css']
 })
 export class SimpleFooterComponent implements OnInit {
-  @Input()
-  profileLink: string;
-  constructor() {
-    this.profileLink = '../';
+
+  userId: string;
+  constructor(private activatedRoute: ActivatedRoute) {
+
   }
 
   ngOnInit() {
+    this.activatedRoute.params
+      .subscribe(
+        (params: any) => {
+          this.userId = params['uid'];
+        }
+      );
   }
 
 }

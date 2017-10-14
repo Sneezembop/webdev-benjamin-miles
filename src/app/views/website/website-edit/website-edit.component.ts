@@ -40,11 +40,11 @@ export class WebsiteEditComponent implements OnInit {
     const tempSite = {_id: this.websiteId, name: this.webname,
       developerId: this.userId, description: this.description};
     this.websiteService.updateWebsite(this.websiteId, tempSite);
-    this.router.navigate(['../']);
+    this.router.navigate(['../website']);
   }
   deleteWebsite() {
     this.websiteService.deleteWebsite(this.websiteId);
-    this.router.navigate(['../']);
+    this.router.navigate(['../website']);
   }
 
 }
