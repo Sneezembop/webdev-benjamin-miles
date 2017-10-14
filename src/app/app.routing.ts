@@ -12,12 +12,12 @@ import {ProfileComponent} from './views/user/profile/profile.component';
 import {WebsiteHomeComponent} from './views/website/website-home/website-home.component';
 import {WebsiteNewComponent} from './views/website/website-new/website-new.component';
 import {WebsiteEditComponent} from './views/website/website-edit/website-edit.component';
-import {WidgetEditComponent} from './views/widget/widget-edit/widget-edit.component';
 import {WidgetNewComponent} from './views/widget/widget-new/widget-new.component';
 import {WidgetHomeComponent} from './views/widget/widget-home/widget-home.component';
 import {PageEditComponent} from './views/page/page-edit/page-edit.component';
 import {PageNewComponent} from './views/page/page-new/page-new.component';
 import {PageHomeComponent} from './views/page/page-home/page-home.component';
+import {WidgetEditComponent} from './views/widget/widget-edit/widget-edit.component';
 
 
 
