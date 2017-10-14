@@ -45,10 +45,10 @@ export class PageEditComponent implements OnInit {
     const tempPage = { _id: this.pageId, name: this.pagename,
       websiteId: this.websiteId, description: this.description };
     this.pageService.updatePage(this.pageId, tempPage);
-    this.router.navigate(['../']);
+    this.router.navigate(['/user', this.userId, 'website', this.websiteId, 'page']);
   }
   deletePage() {
     this.pageService.deletePage(this.pageId);
-    this.router.navigate(['../']);
+    this.router.navigate(['/user', this.userId, 'website', this.websiteId, 'page']);
   }
 }

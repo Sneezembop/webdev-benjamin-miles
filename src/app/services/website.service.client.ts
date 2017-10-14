@@ -35,7 +35,6 @@ export class WebsiteService {
     website.developerId = userId;
     website._id = '' + Math.ceil((Math.random() * 1000));
     this.websites.push(website);
-    alert(website);
     return website;
   }
 

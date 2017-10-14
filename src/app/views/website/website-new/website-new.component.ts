@@ -33,7 +33,7 @@ export class WebsiteNewComponent implements OnInit {
     this.description = this.submitForm.value.description;
     const tempSite = {_id: '123', name: this.webname, developerId: this.userId, description: this.description};
     this.websiteService.createWebsite(this.userId, tempSite);
-    this.router.navigate(['../website']);
+    this.router.navigate(['/user', this.userId, 'website']);
   }
 
 }

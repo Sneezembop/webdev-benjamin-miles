@@ -13,6 +13,7 @@ export class PageNewComponent implements OnInit {
   @ViewChild('f') submitForm: NgForm;
 
   websiteId: string;
+  userId: string;
   errorFlag: boolean;
   errorMsg: string;
   pagename: string;
@@ -25,6 +26,7 @@ export class PageNewComponent implements OnInit {
       .subscribe(
         (params: any) => {
           this.websiteId = params['wid'];
+          this.userId = params['uid'];
         }
       );
   }
@@ -34,6 +36,6 @@ export class PageNewComponent implements OnInit {
     this.description = this.submitForm.value.description;
     const tempPage = { _id: '123', name: this.pagename, websiteId: this.websiteId, description: this.description };
     this.pageService.createPage(this.websiteId, tempPage);
-    this.router.navigate(['../page']);
+    this.router.navigate(['/user', this.userId, 'website', this.websiteId, 'page']);
   }
 }
