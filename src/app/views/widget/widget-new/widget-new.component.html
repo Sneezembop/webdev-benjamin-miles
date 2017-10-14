@@ -1,3 +1,27 @@
-<p>
-  widget-new works!
-</p>
+<form (ngSubmit)="createWidget()" #f="ngForm">
+  <app-landscape-header mainHeader="Widgets" subHeader="Edit Widget"></app-landscape-header>
+  <div class="container-fluid page-content padbodytext row">
+    <div class="col-sm-4 hidden-xs vertical-line">
+      <app-widget-chooser></app-widget-chooser>
+
+    </div>
+    <div class="col-sm-8">
+      <div [ngSwitch]="widget.type">
+
+        <div *ngSwitchCase="'HEADING'">
+          <app-widget-header [widget]='widget'></app-widget-header>
+        </div>
+
+        <div *ngSwitchCase="'IMAGE'">
+          <app-widget-image widget='widget'></app-widget-image>
+        </div>
+
+        <div *ngSwitchCase="'YOUTUBE'">
+          <app-widget-youtube widget='widget'></app-widget-youtube>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+<app-simple-footer></app-simple-footer>
