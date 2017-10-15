@@ -33,7 +33,7 @@ export class WidgetNewComponent implements OnInit {
   }
 
   createWidget() {
-    alert(this.widget.name + ' ' + this.widget.pageId);
+    // alert(this.widget.name + ' ' + this.widget.pageId);
     this.widgetService.createWidget(this.pageId, this.widget);
     this.router.navigate(
       ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
