@@ -10,6 +10,7 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const app = express();
 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -48,6 +49,14 @@ serverSide(app);
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
+
+
+// not sure this is in the right place
+//require("./assignment/app.js")(app);
+//app.listen(port, ipaddress);
+
+
+
 
 
 server.listen( port , () => console.log('Running'));
