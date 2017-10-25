@@ -23,7 +23,9 @@ export class PageListComponent implements OnInit {
         (params: any) => {
           this.userId = params['uid'];
           this.websiteId = params['wid'];
-          this.pages = this.pageService.findPagesByWebsiteId(this.websiteId);
+          this.pageService.findPagesByWebsiteId(this.websiteId).subscribe((pages: any) => {
+            this.pages = pages;
+          });
         }
       );
   }

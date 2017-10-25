@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 
 export class PageService {
 
-  constructor() {
+  constructor(private http: Http) {
   }
 
   pages = [
@@ -30,41 +30,38 @@ export class PageService {
   };
 
 
-  createPage(userId, page) {
-    page.developerId = userId;
-    page._id = '' + Math.ceil((Math.random() * 1000));
-    this.pages.push(page);
-    return page;
+  createPage(websiteId, page) {
+    const url = 'http://localhost:3100/api/website/' + websiteId + '/page';
+    return this.http.post(url, page).map((response: Response) => {
+      return response.json();
+    });
   }
 
   findPagesByWebsiteId(websiteId) {
-    const tempPageList = [];
-    for (let x = 0; x < this.pages.length; x++) {
-      if (this.pages[x].websiteId === websiteId) {  tempPageList.push(this.pages[x]); }
-    }
-    return tempPageList;
+    const url = 'http://localhost:3100/api/website/' + websiteId + '/page';
+    return this.http.get(url).map((response: Response) => {
+      return response.json();
+    });
   }
 
   findPageById(pageId) {
-    for (let x = 0; x < this.pages.length; x++) {
-      if (this.pages[x]._id === pageId) {  return this.pages[x]; }
-    }
+    const url = 'http://localhost:3100/api/page/' + pageId;
+    return this.http.get(url).map((response: Response) => {
+      return response.json();
+    });
   }
 
   updatePage(pageId, page) {
-    for (let x = 0; x < this.pages.length; x++) {
-      if (this.pages[x]._id === pageId) {
-        this.pages[x]._id = page._id;
-        this.pages[x].name = page.name;
-        this.pages[x].websiteId = page.websiteId;
-        this.pages[x].description = page.description;
-        }
-      }
+    const url = 'http://localhost:3100/api/page/' + pageId;
+    return this.http.put(url, page).map((response: Response) => {
+      return response.json();
+    });
     }
 
   deletePage(pageId) {
-    for (let x = 0; x < this.pages.length; x++) {
-      if (this.pages[x]._id === pageId) {  this.pages.splice(x, 1); }
-    }
+    const url = 'http://localhost:3100/api/page/' + pageId;
+    return this.http.delete(url).map((response: Response) => {
+      return response.json();
+    });
   }
 }
