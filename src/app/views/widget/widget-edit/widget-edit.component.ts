@@ -25,23 +25,28 @@ export class WidgetEditComponent implements OnInit {
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
           this.widgetId = params['wgid'];
-          this.widget = this.widgetService.findWidgetById(this.widgetId);
-          this.widgetType = this.widget.type;
-          console.log(this.widgetType);
+          this.widgetService.findWidgetById(this.widgetId).subscribe((widget: any) => {
+            this.widget = widget;
+            this.widgetType = this.widget.type;
+            // console.log(this.widgetType);
+          });
+
         }
       );
   }
 
   updateWidget() {
-    this.widgetService.updateWidget(this.widgetId, this.widget);
-    this.router.navigate(
-      ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+    this.widgetService.updateWidget(this.widgetId, this.widget).subscribe((widget: any) => {
+      this.router.navigate(
+        ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+    });
   }
 
   deleteWidget() {
-    this.widgetService.deleteWidget(this.widgetId);
-    this.router.navigate(
-      ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+    this.widgetService.deleteWidget(this.widgetId).subscribe((widget: any) => {
+      this.router.navigate(
+        ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+    });
   }
 
 }

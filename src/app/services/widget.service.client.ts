@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 
 export class WidgetService {
 
-  constructor() {
+  constructor(private http: Http) {
   }
 
   widgets = [
@@ -37,45 +37,38 @@ export class WidgetService {
   };
 
   createWidget(pageId, widget) {
-    widget.pageId = pageId;
-    widget._id = '' + Math.ceil((Math.random() * 1000));
-    this.widgets.push(widget);
-    // console.log(this.widgetListToString(pageId));
-    return widget;
+    const url = 'http://localhost:3100/api/page/' + pageId + '/widget';
+    return this.http.post(url, widget).map((response: Response) => {
+      return response.json();
+    });
   }
 
   findWidgetsByPageId(pageId) {
-    const tempWidgetList = [];
-    for (let x = 0; x < this.widgets.length; x++) {
-      if (this.widgets[x].pageId === pageId) {
-        tempWidgetList.push(this.widgets[x]);
-      }
-    }
-    return tempWidgetList;
+    const url = 'http://localhost:3100/api/page/' + pageId + '/widget';
+    return this.http.get(url).map((response: Response) => {
+      return response.json();
+    });
   }
 
   findWidgetById(widgetId) {
-    for (let x = 0; x < this.widgets.length; x++) {
-      if (this.widgets[x]._id === widgetId) {
-        return this.widgets[x];
-      }
-    }
+    const url = 'http://localhost:3100/api/widget/' + widgetId;
+    return this.http.get(url).map((response: Response) => {
+      return response.json();
+    });
   }
 
   updateWidget(widgetId, widget) {
-    for (let x = 0; x < this.widgets.length; x++) {
-      if (this.widgets[x]._id === widgetId) {
-        this.widgets.splice(x, 1, widget);
-      }
-    }
+    const url = 'http://localhost:3100/api/widget/' + widgetId;
+    return this.http.put(url, widget).map((response: Response) => {
+      return response.json();
+    });
   }
 
   deleteWidget(widgetId) {
-    for (let x = 0; x < this.widgets.length; x++) {
-      if (this.widgets[x]._id === widgetId) {
-        this.widgets.splice(x, 1);
-      }
-    }
+    const url = 'http://localhost:3100/api/widget/' + widgetId;
+    return this.http.delete(url).map((response: Response) => {
+      return response.json();
+    });
   }
 
   widgetListToString(pageId) {

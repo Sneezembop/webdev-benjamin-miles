@@ -20,7 +20,7 @@ export class WidgetNewComponent implements OnInit {
 
   ngOnInit() {
     this.widget = {};
-    this.widget.type = 'YOUTUBE';
+    this.widget.type = 'HEADER';
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
@@ -34,8 +34,10 @@ export class WidgetNewComponent implements OnInit {
 
   createWidget() {
     // alert(this.widget.name + ' ' + this.widget.pageId);
-    this.widgetService.createWidget(this.pageId, this.widget);
-    this.router.navigate(
-      ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+    this.widgetService.createWidget(this.pageId, this.widget).subscribe((widget: any) => {
+      this.router.navigate(
+        ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+    });
+
   }
 }
