@@ -4,7 +4,7 @@ import {NgForm} from '@angular/forms';
 @Component({
   selector: 'app-landscape-header',
   templateUrl: './landscape-header.component.html',
-  styleUrls: ['./landscape-header.component.css']
+  styleUrls: ['./landscape-header.component.css', '../../css/style.css']
 })
 export class LandscapeHeaderComponent implements OnInit {
   @Input()

@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget-home.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="widget-home.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-home/widget-home.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -38,21 +38,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget.service.server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/services/widget.service.server.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/views/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
-              <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+            <state relative-caret-position="302">
+              <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget.service.client.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/services/widget.service.client.ts">
+      <file leaf-file-name="simple-header.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="69" column="29" lean-forward="true" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+            <state relative-caret-position="248">
+              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landscape-header.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/landscape-header/landscape-header.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landscape-header.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/landscape-header/landscape-header.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="71" lean-forward="false" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simple-header.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -63,16 +95,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="205">
               <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -146,9 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/views/page/page-list/page-list.component.html" />
-        <option value="$PROJECT_DIR$/src/app/views/sharedComponents/simple-footer/simple-footer.component.html" />
-        <option value="$PROJECT_DIR$/src/app/views/sharedComponents/simple-footer/simple-footer.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-list/widget-list.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-header/widget-header.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-header/widget-header.component.html" />
@@ -173,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/app/views/user/login/login.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/user/register/register.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/user/profile/profile.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/user/profile/profile.component.ts" />
         <option value="$PROJECT_DIR$/server/services/user.service.server.js" />
@@ -197,6 +215,10 @@
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-new/widget-new.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-home/widget-home.component.html" />
+        <option value="$PROJECT_DIR$/src/app/views/css/style.css" />
+        <option value="$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/views/sharedComponents/landscape-header/landscape-header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/views/sharedComponents/landscape-header/landscape-header.component.ts" />
       </list>
     </option>
   </component>
@@ -283,6 +305,40 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="sharedComponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="sharedComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="landscape-header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="sharedComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="simple-header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
@@ -417,12 +473,12 @@
       <workItem from="1508080062848" duration="659000" />
       <workItem from="1508363534867" duration="2718000" />
       <workItem from="1508615146599" duration="364000" />
-      <workItem from="1508857764758" duration="26916000" />
+      <workItem from="1508857764758" duration="27190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149233000" />
+    <option name="totallyTimeSpent" value="149507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
@@ -461,27 +517,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-header/widget-header.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-disp-header/widget-disp-header.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-disp-youtube/widget-disp-youtube.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/views/widget/widget-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -592,24 +627,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#73#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -875,6 +892,48 @@
         <state relative-caret-position="0">
           <caret line="0" column="56" lean-forward="false" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/landscape-header/landscape-header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/landscape-header/landscape-header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="71" lean-forward="false" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

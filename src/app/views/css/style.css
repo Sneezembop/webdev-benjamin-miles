@@ -57,3 +57,8 @@ a:hover{
 .mb-widget-spacing{
  padding-bottom: 25px;
 }
+
+.mb-button{
+  border: transparent;
+  background-color: transparent;
+}
