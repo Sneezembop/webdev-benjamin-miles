@@ -81,17 +81,19 @@ module.exports = function (app) {
   }
 
   function updateUser(req, res) {
-    var userId = req.params['userId'];
-    var user = req.params['user'];
+    console.log('updating user');
+    var user = req.body;
+    var userId = user._id;
     for (let x = 0; x < users.length; x++) {
       if (users[x]._id === userId) {
-        users[x]._id = user._id;
         users[x].firstName = user.firstName;
         users[x].lastName = user.lastName;
         users[x].password = user.password;
+        users[x].email = user.email;
         users[x].username = user.username;
       }
     }
+    res.json({});
   }
 
   function deleteUser(req, res) {

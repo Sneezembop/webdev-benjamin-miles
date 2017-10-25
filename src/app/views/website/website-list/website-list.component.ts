@@ -21,10 +21,11 @@ export class WebsiteListComponent implements OnInit {
       .subscribe(
         (params: any) => {
           this.userId = params['uid'];
+          this.websiteService.findWebsitesByUser(this.userId).subscribe((list: any) => {
+            this.websites = list;
+          });
         }
       );
-
-    this.websites = this.websiteService.findWebsitesByUser(this.userId);
   }
 }
 

@@ -19,10 +19,14 @@ export class SimpleHeaderComponent implements OnInit {
   @Input()
   glyphType: string;
 
+  @Input()
+  backLink: string;
+
   constructor() {
     this.headerName = 'test';
-    this.okLink = 'profile';
+    this.okLink = '';
     this.glyphType = 'ok';
+    this.backLink = '../';
   }
 
   ngOnInit() {}

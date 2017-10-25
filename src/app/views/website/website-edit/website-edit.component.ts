@@ -26,9 +26,11 @@ export class WebsiteEditComponent implements OnInit {
         (params: any) => {
           this.userId = params['uid'];
           this.websiteId = params['wid'];
-          const website = this.websiteService.findWebsiteById(this.websiteId);
-          this.webname = website.name;
-          this.description = website.description;
+          this.websiteService.findWebsiteById(this.websiteId).subscribe((website: any) => {
+            this.webname = website.name;
+            this.description = website.description;
+          });
+
         }
       );
 
@@ -39,12 +41,15 @@ export class WebsiteEditComponent implements OnInit {
     this.description = this.submitForm.value.description;
     const tempSite = {_id: this.websiteId, name: this.webname,
       developerId: this.userId, description: this.description};
-    this.websiteService.updateWebsite(this.websiteId, tempSite);
-    this.router.navigate(['/user', this.userId, 'website']);
+    this.websiteService.updateWebsite(this.websiteId, tempSite).subscribe((website: any) => {
+      this.router.navigate(['/user', this.userId, 'website']);
+    });
+
   }
   deleteWebsite() {
-    this.websiteService.deleteWebsite(this.websiteId);
-    this.router.navigate(['/user', this.userId, 'website']);
+    this.websiteService.deleteWebsite(this.websiteId).subscribe((website: any) => {
+      this.router.navigate(['/user', this.userId, 'website']);
+    });
   }
 
 }

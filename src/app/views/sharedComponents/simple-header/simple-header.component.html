@@ -3,7 +3,7 @@
   <nav class="navbar navbar-default navbar-fixed-top row">
     <div class="container-fluid padbodytext">
       <p class="navbar-header navbar-brand pull-left">
-        <a routerLink="../" class="navbar-link">
+        <a routerLink={{backLink}} class="navbar-link">
           <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
       </p>
@@ -14,9 +14,9 @@
         </a>
       </p>
       <p class="navbar-text pull-right">
-        <a routerLink="{{okLink}}" class="navbar-link">
+        <button type = submit routerLink="{{okLink}}" class="navbar-link">
           <span class="glyphicon glyphicon-{{glyphType}}"></span>
-        </a>
+        </button>
       </p>
 
     </div>

@@ -41,14 +41,15 @@ export class UserService {
     }); }
 
   updateUser(userId: string, user: any) {
+    user.id = userId;
     const url = 'http://localhost:3100/api/user/' + userId;
-    return this.http.get(url).map((response: Response) => {
+    return this.http.put(url, user).map((response: Response) => {
       return response.json();
     }); }
 
   deleteUser(userId: string) {
     const url = 'http://localhost:3100/api/user/' + userId;
-    return this.http.get(url).map((response: Response) => {
+    return this.http.delete(url).map((response: Response) => {
       return response.json();
     }); }
 

@@ -1,9 +1,10 @@
-<app-simple-header headerName="Profile" okLink="../profile" glyphType="ok"></app-simple-header>
+<form (ngSubmit)="updateUser()" #f="ngForm">
+<app-simple-header headerName="Profile" okLink="/user/{{userId}}" backLink="/login" glyphType="ok"></app-simple-header>
 
 <!-- page content -->
 <div class="container-fluid">
   <div class="page-content">
-    <form>
+
       <div class="form-group">
         <label for="username">Username</label>
         <input [(ngModel)]="username"
@@ -43,8 +44,9 @@
                name="lname"
                class="form-control"/>
       </div>
-    </form>
+
     <a class="btn btn-primary" routerLink="website">Websites</a>
     <a class="btn btn-danger" routerLink="">Logout</a>
   </div>
 </div>
+</form>

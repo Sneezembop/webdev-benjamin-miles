@@ -9,18 +9,8 @@ import {Router} from '@angular/router';
 
 export class WebsiteService {
 
-  constructor() {
+  constructor(private http: Http) {
   }
-
-  websites = [
-    {_id: '123', name: 'Facebook', developerId: '456', description: 'Lorem'},
-    {_id: '234', name: 'Tweeter', developerId: '456', description: 'Lorem'},
-    {_id: '456', name: 'Gizmodo', developerId: '456', description: 'Lorem'},
-    {_id: '890', name: 'Go', developerId: '123', description: 'Lorem'},
-    {_id: '567', name: 'Tic Tac Toe', developerId: '123', description: 'Lorem'},
-    {_id: '678', name: 'Checkers', developerId: '123', description: 'Lorem'},
-    {_id: '789', name: 'Chess', developerId: '234', description: 'Lorem'}
-  ];
 
   api = {
     'createWebsite': this.createWebsite,
@@ -32,39 +22,37 @@ export class WebsiteService {
 
 
   createWebsite(userId, website) {
-    website.developerId = userId;
-    website._id = '' + Math.ceil((Math.random() * 1000));
-    this.websites.push(website);
-    return website;
+    const url = 'http://localhost:3100/api/user/' + userId + '/website';
+    return this.http.post(url, website).map((response: Response) => {
+      return response.json();
+    });
   }
 
   findWebsitesByUser(userId) {
-    const tempWebsiteList = [];
-    for (let x = 0; x < this.websites.length; x++) {
-      if (this.websites[x].developerId === userId) {  tempWebsiteList.push(this.websites[x]); }
-    }
-    return tempWebsiteList;
+    const url = 'http://localhost:3100/api/user/' + userId + '/website';
+    return this.http.get(url).map((response: Response) => {
+      return response.json();
+    });
   }
 
   findWebsiteById(websiteId) {
-    for (let x = 0; x < this.websites.length; x++) {
-      if (this.websites[x]._id === websiteId) {  return this.websites[x]; }
-    }
+    const url = 'http://localhost:3100/api/website/' + websiteId;
+    return this.http.get(url).map((response: Response) => {
+      return response.json();
+    });
   }
 
   updateWebsite(websiteId, website) {
-    for (let x = 0; x < this.websites.length; x++) {
-      if (this.websites[x]._id === websiteId) {
-        this.websites[x]._id = website._id;
-        this.websites[x].name = website.name;
-        this.websites[x].developerId = website.developerId;
-        this.websites[x].description = website.description; }
-      }
+    const url = 'http://localhost:3100/api/website/' + websiteId;
+    return this.http.put(url, website).map((response: Response) => {
+      return response.json();
+    });
     }
 
   deleteWebsite(websiteId) {
-    for (let x = 0; x < this.websites.length; x++) {
-      if (this.websites[x]._id === websiteId) {  this.websites.splice(x, 1); }
-    }
+    const url = 'http://localhost:3100/api/website/' + websiteId;
+    return this.http.delete(url).map((response: Response) => {
+      return response.json();
+    });
   }
 }
