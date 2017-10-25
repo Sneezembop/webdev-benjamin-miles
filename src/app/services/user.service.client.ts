@@ -22,14 +22,13 @@ export class UserService {
       'validateUser': this.validateUser
   };
 
-  createUser(userId: string, user: any) {
-    const url = 'http://localhost:3100/api/user/' + userId;
-    return this.http.get(url).map((response: Response) => {
+  createUser(user: any) {
+    const url = 'http://localhost:3100/api/user';
+    return this.http.post(url, user).map((response: Response) => {
       return response.json();
     }); }
 
   findUserById(userId: string) {
-    console.log('find user by id from client');
     const url = 'http://localhost:3100/api/user/' + userId;
     return this.http.get(url).map((response: Response) => {
       return response.json();
@@ -55,7 +54,16 @@ export class UserService {
 
 
   validateUser(username: string, password: string) {
-    return true;
+    const url = 'http://localhost:3100/api/user?username=' + username + '&password=' + password;
+   // console.log(url);
+    return this.http.get(url).map((response: Response) => {
+      if (response.json() !== null) {
+       // console.log('anything');
+        return true;
+      } else {
+        return false;
+      }
+    });
   }
 
 

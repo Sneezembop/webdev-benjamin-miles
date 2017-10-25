@@ -29,17 +29,27 @@ export class RegisterComponent implements OnInit {
     this.username = this.loginForm.value.username;
     this.password = this.loginForm.value.password;
     this.vfpassword = this.loginForm.value.vfpassword;
-    // alert(this.username + ' ' + this.password);
+    // console.log(this.username + ' ' + this.password);
+    if (this.password === this.vfpassword) {
+      this.userService.validateUser(this.username, this.password).subscribe((valid: boolean) => {
 
-    const tempuser = this.userService.findUserByUsername(this.username);
+        if (valid) {
+          this.errorFlag = true;
+          this.errorMsg = 'user already exists';
 
-    if ((tempuser == null) && (this.vfpassword === this.password)) {
-      const newuser = {_id: '000', username: this.username, password: this.password, firstName: '', lastName: ''};
-      this.userService.createUser('000', newuser);
-      this.router.navigate(['../login']);
+        } else {
+          const tempuser = {_id: '000', username: this.username, password: this.password,
+            firstName: '', lastName: ''};
+          this.userService.createUser(tempuser).subscribe((user: any) => {
+
+            this.router.navigate(['/login']);
+          });
+
+        }
+      });
     } else {
       this.errorFlag = true;
-      this.errorMsg = 'some kind of error happened';
+      this.errorMsg = 'passwords do not match!';
     }
   }
 }

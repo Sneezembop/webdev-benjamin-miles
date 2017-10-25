@@ -33,36 +33,51 @@ module.exports = function (app) {
 
 
   function createUser(req, res) {
+    console.log('creating new user');
     var userId = '' + Math.ceil((Math.random() * 1000));
-    var user = req.params['user'];
+    var user = req.body;
     user._id = userId;
     users.push(user);
     res.json(user);
   }
 
-  function findUserByUsername(req, res) {
-    console.log(req.params['username']);
-    var username = req.params['username'];
-     var user;
+  function findUserByUsername(username) {
+
     for (let x = 0; x < users.length; x++) {
       if (users[x].username === username) {
-        user = users[x];
+        return users[x];
       }
     }
-    if (user) {
-      res.json(user);
-    } else {
-      res.json({});
-    }
 
+    return null;
+  }
+
+  function findUserByUsernameAndPassword(username,password) {
+
+    for (let x = 0; x < users.length; x++) {
+      if ((users[x].username === username) && (users[x].password === password)) {
+       // console.log('user found');
+        return users[x];
+      }
+    }
+   // console.log('user not found :(');
+    return null;
   }
 
   function findUsers(req,res){
-    var username = req.params['username'];
-    var password = req.params['password'];
 
-    if 
+    var username = req.query['username'];
+    var password = req.query['password'];
+   // console.log(username + ' ' + password);
 
+    if ((username) && (password)){
+      // console.log('finding user by username and password');
+      res.json(findUserByUsernameAndPassword(username, password));
+    } else if (username) {
+      res.json(findUserByUsername(username));
+    } else {
+      res.json(null)
+    }
   }
 
   function updateUser(req, res) {
