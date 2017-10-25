@@ -18,11 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="widget-edit.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="widget-edit.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="4" column="65" lean-forward="true" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget-home.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-home/widget-home.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="56" lean-forward="false" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -152,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-youtube/widget-disp-youtube.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-youtube/widget-disp-youtube.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.html" />
-        <option value="$PROJECT_DIR$/src/app/views/widget/widget-home/widget-home.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-new/widget-new.component.html" />
@@ -187,6 +196,7 @@
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-home/widget-home.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-new/widget-new.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/views/widget/widget-home/widget-home.component.html" />
       </list>
     </option>
   </component>
@@ -298,6 +308,15 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="widget" type="462c0819:PsiDirectoryNode" />
+              <item name="widget-home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
               <item name="widget-new" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -398,12 +417,12 @@
       <workItem from="1508080062848" duration="659000" />
       <workItem from="1508363534867" duration="2718000" />
       <workItem from="1508615146599" duration="364000" />
-      <workItem from="1508857764758" duration="26805000" />
+      <workItem from="1508857764758" duration="26916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149122000" />
+    <option name="totallyTimeSpent" value="149233000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
@@ -467,13 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="74" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-home/widget-home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -854,6 +866,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="65" lean-forward="true" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-home/widget-home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="56" lean-forward="false" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
           <folding />
         </state>
       </provider>
