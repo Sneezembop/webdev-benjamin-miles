@@ -24,39 +24,39 @@ export class UserService {
   };
 
   createUser(user: any) {
-    const url = 'http://localhost:3100/api/user';
+    const url = this.baseUrl + '/api/user';
     return this.http.post(url, user).map((response: Response) => {
       return response.json();
     }); }
 
   findUserById(userId: string) {
-    const url = 'http://localhost:3100/api/user/' + userId;
+    const url = this.baseUrl + '/api/user/' + userId;
     return this.http.get(url).map((response: Response) => {
       return response.json();
     }); }
 
   findUserByUsername(username: string) {
-    const url = 'http://localhost:3100/api/user?username=' + username;
+    const url = this.baseUrl + '/api/user?username=' + username;
     return this.http.get(url).map((response: Response) => {
       return response.json();
     }); }
 
   updateUser(userId: string, user: any) {
     user.id = userId;
-    const url = 'http://localhost:3100/api/user/' + userId;
+    const url = this.baseUrl + '/api/user/' + userId;
     return this.http.put(url, user).map((response: Response) => {
       return response.json();
     }); }
 
   deleteUser(userId: string) {
-    const url = 'http://localhost:3100/api/user/' + userId;
+    const url = this.baseUrl + '/api/user/' + userId;
     return this.http.delete(url).map((response: Response) => {
       return response.json();
     }); }
 
 
   validateUser(username: string, password: string) {
-    const url = 'http://localhost:3100/api/user?username=' + username + '&password=' + password;
+    const url = this.baseUrl + '/api/user?username=' + username + '&password=' + password;
    // console.log(url);
     return this.http.get(url).map((response: Response) => {
       if (response.json() !== null) {

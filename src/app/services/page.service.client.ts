@@ -32,35 +32,35 @@ export class PageService {
 
 
   createPage(websiteId, page) {
-    const url = 'http://localhost:3100/api/website/' + websiteId + '/page';
+    const url = this.baseUrl + '/api/website/' + websiteId + '/page';
     return this.http.post(url, page).map((response: Response) => {
       return response.json();
     });
   }
 
   findPagesByWebsiteId(websiteId) {
-    const url = 'http://localhost:3100/api/website/' + websiteId + '/page';
+    const url = this.baseUrl + '/api/website/' + websiteId + '/page';
     return this.http.get(url).map((response: Response) => {
       return response.json();
     });
   }
 
   findPageById(pageId) {
-    const url = 'http://localhost:3100/api/page/' + pageId;
+    const url = this.baseUrl + '/api/page/' + pageId;
     return this.http.get(url).map((response: Response) => {
       return response.json();
     });
   }
 
   updatePage(pageId, page) {
-    const url = 'http://localhost:3100/api/page/' + pageId;
+    const url = this.baseUrl + '/api/page/' + pageId;
     return this.http.put(url, page).map((response: Response) => {
       return response.json();
     });
     }
 
   deletePage(pageId) {
-    const url = 'http://localhost:3100/api/page/' + pageId;
+    const url = this.baseUrl + '/api/page/' + pageId;
     return this.http.delete(url).map((response: Response) => {
       return response.json();
     });
