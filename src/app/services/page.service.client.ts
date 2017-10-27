@@ -11,6 +11,7 @@ export class PageService {
 
   constructor(private http: Http) {
   }
+  baseUrl = environment.baseUrl;
 
   pages = [
     { _id: '321', name: 'Post 1', websiteId: '456', description: 'Lorem' },

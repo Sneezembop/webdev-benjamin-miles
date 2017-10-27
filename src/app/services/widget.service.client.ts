@@ -4,6 +4,7 @@ import 'rxjs/Rx';
 import {environment} from '../../environments/environment';
 import {Router} from '@angular/router';
 
+
 // injecting service into module
 @Injectable()
 
@@ -12,21 +13,8 @@ export class WidgetService {
   constructor(private http: Http) {
   }
 
-  widgets = [
-    {_id: '123', type: 'HEADER', pageId: '321', size: 2, text: 'GIZMODO'},
-    {_id: '234', type: 'HEADER', pageId: '321', size: 4, text: 'Extra Header'},
-    {
-      _id: '345', type: 'IMAGE', pageId: '321', width: '100%',
-      url: 'https://i.pinimg.com/736x/1b/15/ff/1b15ff0748697cc44048a0d84f5a2f93--rick-and-morty-fondos-rick-and-morty-fanart.jpg'
-    },
-    {_id: '456', type: 'HTML', pageId: '321', text: '<p>Lorem ipsum</p>'},
-    {_id: '567', type: 'HEADER', pageId: '321', size: 5, text: 'Other Header'},
-    {
-      _id: '678', type: 'YOUTUBE', pageId: '321', width: '100%',
-      url: 'https://www.youtube.com/embed/GI6CfKcMhjY'
-    },
-    {_id: '789', type: 'HTML', pageId: '321', text: '<p>Lorem ipsum</p>'}
-  ];
+  baseUrl = environment.baseUrl;
+
 
   api = {
     'createWidget': this.createWidget,
@@ -37,48 +25,40 @@ export class WidgetService {
   };
 
   createWidget(pageId, widget) {
-    const url = 'http://localhost:3100/api/page/' + pageId + '/widget';
+    const url = this.baseUrl + '/api/page/' + pageId + '/widget';
     return this.http.post(url, widget).map((response: Response) => {
       return response.json();
     });
   }
 
   findWidgetsByPageId(pageId) {
-    const url = 'http://localhost:3100/api/page/' + pageId + '/widget';
+    const url = this.baseUrl + '/api/page/' + pageId + '/widget';
     return this.http.get(url).map((response: Response) => {
       return response.json();
     });
   }
 
   findWidgetById(widgetId) {
-    const url = 'http://localhost:3100/api/widget/' + widgetId;
+    const url = this.baseUrl + '/api/widget/' + widgetId;
     return this.http.get(url).map((response: Response) => {
       return response.json();
     });
   }
 
   updateWidget(widgetId, widget) {
-    const url = 'http://localhost:3100/api/widget/' + widgetId;
+    const url = this.baseUrl + '/api/widget/' + widgetId;
     return this.http.put(url, widget).map((response: Response) => {
       return response.json();
     });
   }
 
   deleteWidget(widgetId) {
-    const url = 'http://localhost:3100/api/widget/' + widgetId;
+    const url = this.baseUrl + '/api/widget/' + widgetId;
     return this.http.delete(url).map((response: Response) => {
       return response.json();
     });
   }
 
-  widgetListToString(pageId) {
-    let myString = '';
-    for (let x = 0; x < this.widgets.length; x++) {
-      if (this.widgets[x].pageId === pageId) {
-        myString += this.widgets[x]._id + ' ' + this.widgets[x].type + '\n';
-      }
-    }
-    return myString;
-  }
+
 
 }

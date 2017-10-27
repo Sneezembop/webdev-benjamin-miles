@@ -11,6 +11,7 @@ export class WebsiteService {
 
   constructor(private http: Http) {
   }
+  baseUrl = environment.baseUrl;
 
   api = {
     'createWebsite': this.createWebsite,
@@ -22,7 +23,7 @@ export class WebsiteService {
 
 
   createWebsite(userId, website) {
-    const url = 'http://localhost:3100/api/user/' + userId + '/website';
+    const url = this.baseUrl + '/api/user/' + userId + '/website';
     return this.http.post(url, website).map((response: Response) => {
       return response.json();
     });

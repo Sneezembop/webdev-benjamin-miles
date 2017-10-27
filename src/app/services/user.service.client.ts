@@ -12,6 +12,7 @@ export class UserService {
 
   constructor(private http: Http) {
   }
+  baseUrl = environment.baseUrl;
 
   api = {
      'createUser': this.createUser,
