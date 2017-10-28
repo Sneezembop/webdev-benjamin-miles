@@ -30,28 +30,28 @@ export class WebsiteService {
   }
 
   findWebsitesByUser(userId) {
-    const url = 'http://localhost:3100/api/user/' + userId + '/website';
+    const url = this.baseUrl + '/api/user/' + userId + '/website';
     return this.http.get(url).map((response: Response) => {
       return response.json();
     });
   }
 
   findWebsiteById(websiteId) {
-    const url = 'http://localhost:3100/api/website/' + websiteId;
+    const url = this.baseUrl + '/api/website/' + websiteId;
     return this.http.get(url).map((response: Response) => {
       return response.json();
     });
   }
 
   updateWebsite(websiteId, website) {
-    const url = 'http://localhost:3100/api/website/' + websiteId;
+    const url = this.baseUrl + '/api/website/' + websiteId;
     return this.http.put(url, website).map((response: Response) => {
       return response.json();
     });
     }
 
   deleteWebsite(websiteId) {
-    const url = 'http://localhost:3100/api/website/' + websiteId;
+    const url = this.baseUrl + '/api/website/' + websiteId;
     return this.http.delete(url).map((response: Response) => {
       return response.json();
     });
