@@ -18,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="page.service.client.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page.service.client.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/services/page.service.client.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-242">
@@ -26,6 +26,16 @@
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/components/home/home.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/views/widget/widget-header/widget-header.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-header/widget-header.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-header/widget-disp-header.component.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-header/widget-disp-header.component.html" />
@@ -164,6 +173,7 @@
         <option value="$PROJECT_DIR$/src/app/services/user.service.client.ts" />
         <option value="$PROJECT_DIR$/src/app/services/page.service.client.ts" />
         <option value="$PROJECT_DIR$/src/app/services/website.service.client.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/home/home.component.html" />
       </list>
     </option>
   </component>
@@ -219,17 +229,6 @@
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -243,88 +242,15 @@
               <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="sharedComponents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="website-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="widget-edit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="widget-home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="widget-new" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -419,12 +345,12 @@
       <workItem from="1508615146599" duration="364000" />
       <workItem from="1508857764758" duration="28936000" />
       <workItem from="1509076133170" duration="2123000" />
-      <workItem from="1509208780503" duration="67000" />
+      <workItem from="1509208780503" duration="213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153443000" />
+    <option name="totallyTimeSpent" value="153589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
@@ -469,13 +395,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-disp-youtube/widget-disp-youtube.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="6" column="74" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -867,6 +786,14 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
