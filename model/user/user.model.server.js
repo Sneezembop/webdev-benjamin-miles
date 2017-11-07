@@ -14,10 +14,8 @@ function findUserByCredentials(username, password) {
 }
 
 function createUser(user) {
-  UserModel.create(user, function (err, doc) {
-    console.log(err);
-    console.log(doc);
-  });
+  console.log("creating user");
+  return UserModel.create(user);
 }
 
 function findUserById(userId) {
@@ -29,15 +27,9 @@ function findUserByUsername(username) {
 }
 
 function updateUser(userId, user) {
-  UserModel.update(userId, user, function (err, doc) {
-    console.log(err);
-    console.log(doc);
-  });
+  return UserModel.update(userId, user);
 }
 
 function deleteUser(userId) {
-  UserModel.remove(userId, function (err, doc) {
-    console.log(err);
-    console.log(doc);
-  })
+  return UserModel.remove(userId);
 }

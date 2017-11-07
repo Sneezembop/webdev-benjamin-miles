@@ -17,7 +17,7 @@ var widgetSchema = mongoose.Schema ( {
   deletable: Boolean,
   formatted: Boolean,
   dateCreated: Date
-}, {collection: 'collectionNameInMongo'});
+}, {collection: 'cs5610'});
 
 
 module.exports = widgetSchema;

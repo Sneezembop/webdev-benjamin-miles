@@ -7,7 +7,7 @@ var pageSchema = mongoose.Schema ( {
   description: String,
   widgets: [{type:mongoose.Schema.Types.ObjectId, ref: 'widgetSchema'}],
   dateCreated: Date
-}, {collection: 'collectionNameInMongo'});
+}, {collection: 'cs5610'});
 
 
 module.exports = pageSchema;

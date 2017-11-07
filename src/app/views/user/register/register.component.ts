@@ -31,14 +31,8 @@ export class RegisterComponent implements OnInit {
     this.vfpassword = this.loginForm.value.vfpassword;
     // console.log(this.username + ' ' + this.password);
     if (this.password === this.vfpassword) {
-      this.userService.validateUser(this.username, this.password).subscribe((valid: boolean) => {
 
-        if (valid) {
-          this.errorFlag = true;
-          this.errorMsg = 'user already exists';
-
-        } else {
-          const tempuser = {_id: '000', username: this.username, password: this.password,
+          const tempuser = {username: this.username, password: this.password,
             firstName: '', lastName: ''};
           this.userService.createUser(tempuser).subscribe((user: any) => {
 
@@ -46,10 +40,5 @@ export class RegisterComponent implements OnInit {
           });
 
         }
-      });
-    } else {
-      this.errorFlag = true;
-      this.errorMsg = 'passwords do not match!';
-    }
   }
 }

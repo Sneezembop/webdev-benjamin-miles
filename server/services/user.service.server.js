@@ -1,5 +1,7 @@
 module.exports = function (app) {
 
+  var UserModel = require("../../model/user/user.model.server");
+
   app.post("/api/user", createUser);
   app.put("/api/user/:userId", updateUser);
   app.get("/api/user/:userId", findUserById);
@@ -33,12 +35,11 @@ module.exports = function (app) {
 
 
   function createUser(req, res) {
-    console.log('creating new user');
-    var userId = '' + Math.ceil((Math.random() * 1000));
-    var user = req.body;
-    user._id = userId;
-    users.push(user);
-    res.json(user);
+    UserModel.createUser(req.body).then(function (user) {
+      console.log("got something!");
+      console.log(user.toString());
+      res.json(user);
+    });
   }
 
   function findUserByUsername(username) {

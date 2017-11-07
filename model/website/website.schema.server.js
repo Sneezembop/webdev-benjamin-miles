@@ -6,7 +6,7 @@ var websiteSchema = mongoose.Schema ( {
   description: String,
   websites: [{type:mongoose.Schema.Types.ObjectId, ref: 'pageSchema'}],
   dateCreated: Date
-}, {collection: 'collectionNameInMongo'});
+}, {collection: 'cs5610'});
 
 
 module.exports = websiteSchema;
