@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
   }
 
   updateUser() {
-
+    // console.log('user update requested');
     // console.log(this.fname + ' ' + this.profileForm.value.firstName);
     this.user.firstName = this.fname;
     this.user.lastName = this.lname;
@@ -47,6 +47,11 @@ export class ProfileComponent implements OnInit {
     this.user.email = this.email;
 
     this.userService.updateUser(this.userId, this.user).subscribe((user: any) => {
+      if (user) {
+        alert('User Updated!');
+      } else {
+        alert('Something went wrong :(');
+      }
     });
   }
 

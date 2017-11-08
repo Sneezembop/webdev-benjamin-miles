@@ -19,7 +19,8 @@ export class RegisterComponent implements OnInit {
   errorFlag: boolean;
   errorMsg = 'Invalid username or password !';
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) {
+  }
 
   ngOnInit() {
     this.errorFlag = false;
@@ -31,14 +32,25 @@ export class RegisterComponent implements OnInit {
     this.vfpassword = this.loginForm.value.vfpassword;
     // console.log(this.username + ' ' + this.password);
     if (this.password === this.vfpassword) {
+      this.userService.validateUser(this.username, this.password).subscribe((res: any) => {
 
-          const tempuser = {username: this.username, password: this.password,
-            firstName: '', lastName: ''};
+        if (res === true) {
+          const tempuser = {
+            username: this.username, password: this.password,
+            firstName: '', lastName: ''
+          };
           this.userService.createUser(tempuser).subscribe((user: any) => {
 
             this.router.navigate(['/login']);
           });
 
+        } else {
+          this.errorFlag = true;
+          this.errorMsg = 'User already exists!';
         }
+      });
+
+
+    }
   }
 }

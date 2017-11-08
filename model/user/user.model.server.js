@@ -27,7 +27,7 @@ function findUserByUsername(username) {
 }
 
 function updateUser(userId, user) {
-  return UserModel.update(userId, user);
+  return UserModel.update({_id: userId}, user);
 }
 
 function deleteUser(userId) {

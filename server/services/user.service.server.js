@@ -8,61 +8,29 @@ module.exports = function (app) {
   app.get("/api/user", findUsers);
   app.delete("/api/user/:userId", deleteUser);
 
-  var users = [
-    {_id: '456', username: 'alice', password: 'alice', firstName: 'Alice', lastName: 'Wonder'},
-    {_id: '234', username: 'bob', password: 'bob', firstName: 'Bob', lastName: 'Marley'},
-    {_id: '345', username: 'charly', password: 'charly', firstName: 'Charly', lastName: 'Garcia'},
-    {_id: '123', username: 'jannunzi', password: 'jannunzi', firstName: 'Jose', lastName: 'Annunzi'}
-  ];
-
   function findUserById(req, res) {
     //console.log("find user by id request made it to server");
     var userId = req.params['userId'];
-    var user;
-
-      for (let x = 0; x < users.length; x++) {
-        if (users[x]._id === userId) {
-          user = users[x];
-        }
-      }
-
-    if (user) {
+    UserModel.findUserById(userId).then(function (user) {
       res.json(user);
-    } else {
-      res.json({});
-    }
+    });
   }
 
 
   function createUser(req, res) {
     UserModel.createUser(req.body).then(function (user) {
-      console.log("got something!");
-      console.log(user.toString());
+      // console.log("got something!");
+      // console.log(user.toString());
       res.json(user);
     });
   }
 
   function findUserByUsername(username) {
-
-    for (let x = 0; x < users.length; x++) {
-      if (users[x].username === username) {
-        return users[x];
-      }
-    }
-
-    return null;
+    return UserModel.findUserByUsername(username);
   }
 
   function findUserByUsernameAndPassword(username,password) {
-
-    for (let x = 0; x < users.length; x++) {
-      if ((users[x].username === username) && (users[x].password === password)) {
-       // console.log('user found');
-        return users[x];
-      }
-    }
-   // console.log('user not found :(');
-    return null;
+    return UserModel.findUserByCredentials(username, password);
   }
 
   function findUsers(req,res){
@@ -73,37 +41,31 @@ module.exports = function (app) {
 
     if ((username) && (password)){
       // console.log('finding user by username and password');
-      res.json(findUserByUsernameAndPassword(username, password));
+      findUserByUsernameAndPassword(username, password).then(function (user) {
+        res.json(user);
+      });
+
     } else if (username) {
-      res.json(findUserByUsername(username));
+      findUserByUsername(username).then(function (user) {
+        res.json(user);
+      });
+
     } else {
       res.json(null)
     }
   }
 
   function updateUser(req, res) {
-    console.log('updating user');
-    var user = req.body;
-    var userId = user._id;
-    for (let x = 0; x < users.length; x++) {
-      if (users[x]._id === userId) {
-        users[x].firstName = user.firstName;
-        users[x].lastName = user.lastName;
-        users[x].password = user.password;
-        users[x].email = user.email;
-        users[x].username = user.username;
-      }
-    }
-    res.json({});
+    //console.log('server update user request');
+    UserModel.updateUser(req.params['userId'], req.body).then(function(user){
+      res.json(user);
+    })
   }
 
   function deleteUser(req, res) {
-    var userId = req.params['userId'];
-    for (let x = 0; x < users.length; x++) {
-      if (users[x]._id === userId) {
-        users.splice(x, 1);
-      }
-    }
+    UserModel.deleteUser(req.params['userId']).then(function(any){
+      res.json(any);
+    })
   }
 
 
