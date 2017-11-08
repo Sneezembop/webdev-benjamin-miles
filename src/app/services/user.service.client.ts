@@ -61,9 +61,9 @@ export class UserService {
     return this.http.get(url).map((response: Response) => {
       if (response.json() !== null) {
        // console.log('anything');
-        return true;
-      } else {
         return false;
+      } else {
+        return true;
       }
     });
   }

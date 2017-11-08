@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
     this.userService.validateUser(this.username, this.password).subscribe((valid: boolean) => {
 
-      if (valid) {
+      if (!valid) {
         this.userService.findUserByUsername(this.username).subscribe((user: any) => {
          // console.log('got something back!');
          // console.log(user);
