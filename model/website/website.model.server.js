@@ -26,23 +26,26 @@ function findAllWebsitesForUser(userId) {
   });
 
 }
+
 function findWebsiteById(websiteId) {
-    return WebsiteModel.findById(websiteId);
+  return WebsiteModel.findById(websiteId);
 }
+
 function updateWebsite(websiteId, website) {
   return WebsiteModel.update({_id: websiteId}, website);
 }
+
 function deleteWebsite(websiteId) {
-  return WebsiteModel.findWebsiteById(websiteId).then(function(website) {
-    return UserModel.findUserById(website.developerId).then(function(user) {
-      var i = user.websites.indexOf(website);
-      user.websites.splice(i,1);
-      return WebsiteModel.delete({_id: websiteId}).then(function(any) {
+  return WebsiteModel.findWebsiteById(websiteId).then(function (website) {
+    var userId = website.developerId;
+    WebsiteModel.deleteOne({_id: websiteId}).then(function () {
+      UserModel.findUserById(userId).then(function (user) {
+        var i = user.websites.indexOf(website);
+        user.websites.splice(i, 1);
         return user.save();
       });
     });
   });
 
 
-  return WebsiteModel.remove({_id: websiteId});
 }
