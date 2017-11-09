@@ -5,6 +5,7 @@
       <app-widget-chooser [widget]="widget"></app-widget-chooser>
 
     </div>
+    <div *ngIf = "widgetReady">
     <div class="col-sm-8">
     <div [ngSwitch]="widget.type">
 
@@ -25,6 +26,7 @@
               (click)='deleteWidget()'>Delete
       </button>
     </div>
+  </div>
   </div>
 </form>
 <app-simple-footer></app-simple-footer>

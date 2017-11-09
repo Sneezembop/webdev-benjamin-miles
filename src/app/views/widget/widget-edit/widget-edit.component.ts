@@ -14,10 +14,12 @@ export class WidgetEditComponent implements OnInit {
   pageId: string;
   widgetType: string;
   widgetId: string;
+  widgetReady = false;
 
   constructor(private activatedRoute: ActivatedRoute, private widgetService: WidgetService, private router: Router) { }
 
   ngOnInit() {
+    this.widgetReady = false;
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
@@ -28,6 +30,7 @@ export class WidgetEditComponent implements OnInit {
           this.widgetService.findWidgetById(this.widgetId).subscribe((widget: any) => {
             this.widget = widget;
             this.widgetType = this.widget.type;
+            this.widgetReady = true;
             // console.log(this.widgetType);
           });
 
