@@ -41,6 +41,7 @@ import { WidgetDispTextComponent } from './views/widget/widget-disp-text/widget-
 import { WidgetHtmlComponent } from './views/widget/widget-html/widget-html.component';
 import { QuillEditorModule } from 'ngx-quill-editor';
 import { WidgetTextComponent } from './views/widget/widget-text/widget-text.component';
+import { FlickrImageSearchComponent } from './views/widget/widget-image/flickr-image-search/flickr-image-search.component';
 
 @NgModule({
   // Declare components here
@@ -75,7 +76,8 @@ import { WidgetTextComponent } from './views/widget/widget-text/widget-text.comp
     WidgetDispHtmlComponent,
     WidgetDispTextComponent,
     WidgetHtmlComponent,
-    WidgetTextComponent
+    WidgetTextComponent,
+    FlickrImageSearchComponent
   ],
   imports: [
     BrowserModule,
