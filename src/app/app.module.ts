@@ -36,6 +36,11 @@ import { WidgetYoutubeComponent } from './views/widget/widget-youtube/widget-you
 import { WidgetDispHeaderComponent } from './views/widget/widget-disp-header/widget-disp-header.component';
 import { WidgetDispYoutubeComponent } from './views/widget/widget-disp-youtube/widget-disp-youtube.component';
 import { WidgetDispImageComponent } from './views/widget/widget-disp-image/widget-disp-image.component';
+import { WidgetDispHtmlComponent } from './views/widget/widget-disp-html/widget-disp-html.component';
+import { WidgetDispTextComponent } from './views/widget/widget-disp-text/widget-disp-text.component';
+import { WidgetHtmlComponent } from './views/widget/widget-html/widget-html.component';
+import { QuillEditorModule } from 'ngx-quill-editor';
+import { WidgetTextComponent } from './views/widget/widget-text/widget-text.component';
 
 @NgModule({
   // Declare components here
@@ -66,13 +71,18 @@ import { WidgetDispImageComponent } from './views/widget/widget-disp-image/widge
     WidgetYoutubeComponent,
     WidgetDispHeaderComponent,
     WidgetDispYoutubeComponent,
-    WidgetDispImageComponent
+    WidgetDispImageComponent,
+    WidgetDispHtmlComponent,
+    WidgetDispTextComponent,
+    WidgetHtmlComponent,
+    WidgetTextComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    Routing
+    Routing,
+    QuillEditorModule
   ],
   // Client Side services here
   providers: [TestService, UserService, WebsiteService, PageService, WidgetService],

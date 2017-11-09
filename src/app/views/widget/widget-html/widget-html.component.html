@@ -1,0 +1,15 @@
+
+<div class="form-group">
+  <label for="headname">Name</label>
+  <input value = [(widget.name)]
+         type="text"
+         id="headname"
+         name="name"
+         ngModel
+         required
+         [(ngModel)]="widget.name"
+         #formwidgetname="ngModel"
+         class="form-control"/>
+
+  <quill-editor [(ngModel)]="widget.text" name="text"></quill-editor>
+</div>

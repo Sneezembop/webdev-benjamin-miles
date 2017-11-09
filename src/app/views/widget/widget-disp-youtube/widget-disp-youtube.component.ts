@@ -17,6 +17,8 @@ export class WidgetDispYoutubeComponent implements OnInit {
   }
 
   cleanUrl() {
+    this.widget.url = this.widget.url.replace('/watch?v=', '/embed/');
+
     return this.domSanitizer.bypassSecurityTrustResourceUrl(this.widget.url);
   }
 

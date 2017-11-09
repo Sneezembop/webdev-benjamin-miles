@@ -20,6 +20,13 @@
           <app-widget-youtube [widget]='widget'></app-widget-youtube>
         </div>
 
+        <div *ngSwitchCase="'HTML'">
+          <app-widget-html [widget]='widget'></app-widget-html>
+        </div>
+        <div *ngSwitchCase="'TEXT'">
+          <app-widget-text [widget]='widget'></app-widget-text>
+        </div>
+
       </div>
     </div>
   </div>
