@@ -28,11 +28,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widget-edit.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="widget-edit.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="159">
               <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget.service.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/services/widget.service.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget-disp-image.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/test-mongodb/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-101">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/models.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget-disp-youtube.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-disp-youtube/widget-disp-youtube.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -92,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-new/widget-new.component.html" />
@@ -127,7 +186,6 @@
         <option value="$PROJECT_DIR$/server/services/website.service.server.js" />
         <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/model/user/user.model.server.js" />
-        <option value="$PROJECT_DIR$/model/models.server.js" />
         <option value="$PROJECT_DIR$/model/user/user.schema.server.js" />
         <option value="$PROJECT_DIR$/model/website/website.schema.server.js" />
         <option value="$PROJECT_DIR$/model/page/page.schema.server.js" />
@@ -139,10 +197,12 @@
         <option value="$PROJECT_DIR$/model/page/page.model.server.js" />
         <option value="$PROJECT_DIR$/src/app/views/page/page-new/page-new.component.ts" />
         <option value="$PROJECT_DIR$/server/services/page.service.server.js" />
-        <option value="$PROJECT_DIR$/server/services/widget.service.server.js" />
         <option value="$PROJECT_DIR$/model/widget/widget.model.server.js" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.html" />
         <option value="$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.ts" />
+        <option value="$PROJECT_DIR$/server/services/widget.service.server.js" />
+        <option value="$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.html" />
+        <option value="$PROJECT_DIR$/model/models.server.js" />
       </list>
     </option>
   </component>
@@ -201,37 +261,13 @@
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="test-mongodb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
@@ -282,6 +318,15 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="widget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdev-benjamin-miles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
+              <item name="widget-disp-youtube" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webdev-benjamin-miles" type="b2602c69:ProjectViewProjectNode" />
@@ -393,12 +438,12 @@
       <workItem from="1509490373917" duration="1917000" />
       <workItem from="1509566424656" duration="1810000" />
       <workItem from="1510067030822" duration="19857000" />
-      <workItem from="1510182513437" duration="8750000" />
+      <workItem from="1510182513437" duration="9312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186549000" />
+    <option name="totallyTimeSpent" value="187111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
@@ -463,27 +508,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/views/sharedComponents/simple-header/simple-header.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/user/profile/profile.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-101">
-          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/website/website-home/website-home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views/page/page-edit/page-edit.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -679,22 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/models.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/widget/widget.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -831,18 +839,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/widget.service.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-edit/widget-edit.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/services/widget.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-disp-youtube/widget-disp-youtube.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/widget/widget-disp-image/widget-disp-image.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/test-mongodb/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/models.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding />
         </state>
       </provider>
