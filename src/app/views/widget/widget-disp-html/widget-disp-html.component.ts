@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-widget-disp-html',
@@ -9,9 +9,13 @@ export class WidgetDispHtmlComponent implements OnInit {
   @Input()
   widget: any;
 
+  @ViewChild('htmlDisplay') htmlDisplay: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
+    this.htmlDisplay.nativeElement.innerHTML = this.widget.text;
+
   }
 
 }
