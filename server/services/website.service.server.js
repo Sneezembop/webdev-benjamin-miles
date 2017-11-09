@@ -20,8 +20,6 @@ module.exports = function (app) {
   function findAllWebsitesForUser(req, res) {
     var userId = req.params['userId'];
     WebsiteModel.findAllWebsitesForUser(userId).then(function (websiteList) {
-      console.log('found the following websites:');
-      console.log(websiteList);
       res.json(websiteList);
     });
   }

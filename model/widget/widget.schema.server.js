@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
-var widgetSchema = mongoose.Schema ( {
+var WidgetSchema = mongoose.Schema ( {
 
-  pageId: {type:mongoose.Schema.Types.ObjectId, ref: 'pageSchema'},
+  pageId: {type:mongoose.Schema.Types.ObjectId, ref: 'PageSchema'},
   type: String, enum : ['HEADING', 'IMAGE', 'YOUTUBE', 'HTML', 'INPUT'],
   name: String,
   text: String,
@@ -20,4 +20,4 @@ var widgetSchema = mongoose.Schema ( {
 }, {collection: 'widget'});
 
 
-module.exports = widgetSchema;
+module.exports = WidgetSchema;

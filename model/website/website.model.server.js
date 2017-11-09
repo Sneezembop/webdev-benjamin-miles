@@ -21,9 +21,9 @@ function createWebsiteForUser(userId, website) {
 }
 
 function findAllWebsitesForUser(userId) {
-  console.log('finding websites for user');
-  console.log(userId);
-  return WebsiteModel.find({developerId: userId}).populate('developerId').exec();
+  return WebsiteModel.find({developerId: userId}).populate('developerId').exec(function (err) {
+    if (err) console.log(err);
+  });
 
 }
 function findWebsiteById(websiteId) {
