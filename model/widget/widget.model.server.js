@@ -33,6 +33,7 @@ function findWidgetById(widgetId) {
 }
 
 function updateWidget(widgetId, widget) {
+  // console.log('updating widget');
   return WidgetModel.update({_id: widgetId}, widget);
 }
 

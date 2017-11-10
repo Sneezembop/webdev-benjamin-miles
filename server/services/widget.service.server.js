@@ -51,7 +51,7 @@ module.exports = function (app) {
   }
   function uploadImage(req, res) {
 
-    console.log('image uploading');
+    // console.log('image uploading');
     var widgetId      = req.body.widgetId;
     var width         = req.body.width;
     var myFile        = req.file;
@@ -66,21 +66,18 @@ module.exports = function (app) {
     var destination   = myFile.destination;  // folder where file is saved to
     var size          = myFile.size;
     var mimetype      = myFile.mimetype;
-    console.log(path);
+    // console.log(path);
 
-    var newWidget = null;
-    WidgetModel.findWidgetById(widgetId)
-      .then(function(widget) {
-        newWidget = widget;
-        newWidget.url = '/assets/uploads/'+filename;
-        WidgetModel.updateWidget(widgetId, newWidget)
-          .then(function(widget) {
-            var callbackUrl   = "/user/"+userId+"/website/"+websiteId+ '/page/' + pageId + '/widget';
-            widget.save();
-            console.log('image upload sucess!');
-            res.redirect(callbackUrl);
-          });
+
+    WidgetModel.findWidgetById(widgetId).then(function(widget) {
+      widget.url = '/assets/uploads/' + filename;
+      WidgetModel.updateWidget(widgetId, widget). then(function(any){
+        // /user/ userId /website/ websiteID /page/ pageId /widget
+        var callbackUrl = '/user/'+userId+'/website/'+websiteId+ '/page/' + pageId + '/widget';
+        res.redirect(callbackUrl);
       });
+    });
+
   }
 
 
