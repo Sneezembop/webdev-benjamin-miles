@@ -3,6 +3,7 @@ import {WidgetService} from '../../../services/widget.service.client';
 import {ActivatedRoute, Router} from '@angular/router';
 import {environment} from '../../../../environments/environment';
 
+
 @Component({
   selector: 'app-widget-image',
   templateUrl: './widget-image.component.html',
@@ -31,12 +32,8 @@ export class WidgetImageComponent implements OnInit {
         }
       );
   }
-
-  uploadFile() {
-    console.log('file not uploaded because no one hooked this up.');
-  }
   goToFlickr() {
-    console.log(this.widget._id);
+
     if (this.widget._id == null) {
       this.widgetService.createWidget(this.pageId, this.widget).subscribe((newwidget: any) => {
         this.router.navigate(
@@ -45,8 +42,5 @@ export class WidgetImageComponent implements OnInit {
     } else {
       this.router.navigate(
         ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget', this.widget._id, 'flickr']);
-    }
-
-    console.log('attempting to flickr');
-  }
+    }}
 }
