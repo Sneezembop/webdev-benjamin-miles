@@ -43,22 +43,18 @@
            [(ngModel)]="widget.width"
            #formwidgetname="ngModel"
            class="form-control"/>
-
-    <label for="file">Upload File</label>
-    <input value = [(widget.file)]
-           type="file"
-           id="file"
-           name="file"
-           ngModel
-           required
-           [(ngModel)]="widget.file"
-           #formwidgetfile="ngModel"
-           class="form-control"/>
   </div>
 
+  <form ngNoForm action="{{baseUrl}}/api/upload" method="post" enctype="multipart/form-data">
+    <input  name="myFile"   type="file" class="form-control"/>
+    <input  name="widgetId" value="{{widgetId}}"   style="display: none"/>
+    <input  name="websiteId" value="{{websiteId}}"   style="display: none"/>
+    <input  name="pageId" value="{{pageId}}"   style="display: none"/>
+    <input  name="userId" value="{{userId}}"   style="display: none"/>
+    <button type="submit" class="btn btn-block btn-primary">Upload Image</button>
+    <br/>
+  </form>
 
-  <a class="btn btn-primary btn-block"
-     (click)="uploadFile()" >Upload File</a>
 
   <a class="btn btn-primary btn-block"
      (click)="goToFlickr()" >Search Flickr</a>
