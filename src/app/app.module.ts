@@ -20,6 +20,7 @@ import {UserService} from './services/user.service.client';
 import {WebsiteService} from './services/website.service.client';
 import {PageService} from './services/page.service.client';
 import {WidgetService} from './services/widget.service.client';
+import {FlickrService} from './services/flickr.service.client';
 import {WebsiteNewComponent} from './views/website/website-new/website-new.component';
 import {WebsiteEditComponent} from './views/website/website-edit/website-edit.component';
 import {PageHomeComponent} from './views/page/page-home/page-home.component';
@@ -87,7 +88,7 @@ import { FlickrImageSearchComponent } from './views/widget/widget-image/flickr-i
     QuillEditorModule
   ],
   // Client Side services here
-  providers: [TestService, UserService, WebsiteService, PageService, WidgetService],
+  providers: [TestService, FlickrService, UserService, WebsiteService, PageService, WidgetService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
