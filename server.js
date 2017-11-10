@@ -36,21 +36,13 @@ app.use(function(req, res, next) {
 const port = process.env.PORT || '3100';
 app.set('port', port);
 
+// For Build: Catch all other routes and return the index file -- BUILDING
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
 
 // Create HTTP server
-/*
-const server = http.createServer(app);
 
-var serverSide = require("./server/test-mongodb/app");
-serverSide(app);
-
-
-
-
-server.listen( port , () => console.log('Running'));
-
-
-*/
 const appServer = http.createServer(app);
 
 var appServerSide = require("./server/app");
