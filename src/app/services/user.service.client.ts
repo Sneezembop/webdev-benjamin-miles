@@ -9,9 +9,12 @@ import {Router} from '@angular/router';
 @Injectable()
 
 export class UserService {
+  options: RequestOptions = new RequestOptions();
+
 
   constructor(private http: Http) {
   }
+
   baseUrl = environment.baseUrl;
 
   api = {
@@ -22,6 +25,13 @@ export class UserService {
      'deleteUser': this.deleteUser,
       'validateUser': this.validateUser
   };
+  register(username, password) {
+
+  }
+  login(username, password) {
+
+    return response.json();
+  }
 
   createUser(user: any) {
     const url = this.baseUrl + '/api/user';
@@ -67,9 +77,6 @@ export class UserService {
       }
     });
   }
-
-
-
 
 }
 

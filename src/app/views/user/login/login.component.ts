@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {UserService} from '../../../services/user.service.client';
 import {Router} from '@angular/router';
+import {SharedService} from '../../../services/shared.service.client';
 
 
 @Component({
@@ -20,28 +21,29 @@ export class LoginComponent implements OnInit {
   errorMsg = 'Invalid username or password !';
 
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private userService: UserService, private sharedService: SharedService, private router: Router) {
   }
+
 
   login() {
 
+    // fetching data from loginForm
     this.username = this.loginForm.value.username;
     this.password = this.loginForm.value.password;
-    // console.log(this.username + ' ' + this.password);
 
-    this.userService.validateUser(this.username, this.password).subscribe((valid: boolean) => {
-
-      if (!valid) {
-        this.userService.findUserByUsername(this.username).subscribe((user: any) => {
-         // console.log('got something back!');
-         // console.log(user);
-          this.router.navigate(['user/', user._id]);
-        });
-      } else {
-        this.errorFlag = true;
-      }
-    });
+    // calling client side userservice to send login information
+    console.log('data', this.username);
+    this.userService.login(this.username, this.password)
+      .subscribe(
+        (data: any) => {
+          this.sharedService.user = data;
+          this.router.navigate(['/profile']); },
+        (error: any) => {
+          console.log(error);
+        }
+      );
   }
+
 
   ngOnInit() {
     this.errorFlag = false;
