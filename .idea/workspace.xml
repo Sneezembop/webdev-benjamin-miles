@@ -21,8 +21,8 @@
       <file leaf-file-name="user.service.client.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/services/user.service.client.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+            <state relative-caret-position="404">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/src/app/services/shared.service.client.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/services/user.service.client.ts" />
         <option value="$PROJECT_DIR$/src/app/views/user/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/user.service.client.ts" />
       </list>
     </option>
   </component>
@@ -389,12 +389,12 @@
       <workItem from="1510067030822" duration="19857000" />
       <workItem from="1510182513437" duration="35120000" />
       <workItem from="1510598793505" duration="77000" />
-      <workItem from="1511816217521" duration="3321000" />
+      <workItem from="1511816217521" duration="4167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216317000" />
+    <option name="totallyTimeSpent" value="217163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
@@ -839,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/user.service.client.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        <state relative-caret-position="404">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
