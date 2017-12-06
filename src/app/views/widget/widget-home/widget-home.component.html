@@ -1,26 +1,28 @@
 <app-simple-header headerName="Widgets" backLink="../../" okLink="new" glyphType="plus"></app-simple-header>
 <div class="padbodytext page-content">
-<div *ngFor="let widget of widgets">
-<div [ngSwitch]="widget.type">
+  <div appSortable (newIndexes)="onIndexChange($event)" class="container-fluid">
+    <div *ngFor="let widget of widgets">
+      <div [ngSwitch]="widget.type">
 
-  <div *ngSwitchCase="'HEADER'">
-    <app-widget-disp-header [widget]='widget' ></app-widget-disp-header>
-  </div>
+        <div *ngSwitchCase="'HEADER'">
+          <app-widget-disp-header [widget]='widget'></app-widget-disp-header>
+        </div>
 
-  <div *ngSwitchCase="'IMAGE'">
-    <app-widget-disp-image [widget]='widget'></app-widget-disp-image>
-  </div>
+        <div *ngSwitchCase="'IMAGE'">
+          <app-widget-disp-image [widget]='widget'></app-widget-disp-image>
+        </div>
 
-  <div *ngSwitchCase="'YOUTUBE'">
-    <app-widget-disp-youtube [widget]='widget'></app-widget-disp-youtube>
+        <div *ngSwitchCase="'YOUTUBE'">
+          <app-widget-disp-youtube [widget]='widget'></app-widget-disp-youtube>
+        </div>
+        <div *ngSwitchCase="'HTML'">
+          <app-widget-disp-html [widget]='widget'></app-widget-disp-html>
+        </div>
+        <div *ngSwitchCase="'TEXT'">
+          <app-widget-disp-text [widget]='widget'></app-widget-disp-text>
+        </div>
+      </div>
+    </div>
   </div>
-  <div *ngSwitchCase="'HTML'">
-    <app-widget-disp-html [widget]='widget'></app-widget-disp-html>
-  </div>
-  <div *ngSwitchCase="'TEXT'">
-    <app-widget-disp-text [widget]='widget'></app-widget-disp-text>
-  </div>
-</div>
-</div>
 </div>
 <app-simple-footer></app-simple-footer>

@@ -21,8 +21,16 @@ export class WidgetService {
     'findWidgetsByPageId': this.findWidgetsByPageId,
     'findWidgetById': this.findWidgetById,
     'updateWidget': this.updateWidget,
-    'deleteWidget': this.deleteWidget
+    'deleteWidget': this.deleteWidget,
+    'reorderWidget': this.reorderWidget
   };
+
+  reorderWidget(pageId, start, stop) {
+    const url = this.baseUrl + '/api/page/' + pageId + '/widget?initial=' + start + '&final=' + stop;
+    return this.http.put(url, null).map((response: Response) => {
+      return response.json();
+    });
+  }
 
   createWidget(pageId, widget) {
     const url = this.baseUrl + '/api/page/' + pageId + '/widget';

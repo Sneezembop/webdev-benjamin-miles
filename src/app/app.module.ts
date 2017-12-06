@@ -45,6 +45,7 @@ import {WidgetTextComponent} from './views/widget/widget-text/widget-text.compon
 import {FlickrImageSearchComponent} from './views/widget/widget-image/flickr-image-search/flickr-image-search.component';
 import {SharedService} from './services/shared.service.client';
 import {AuthenticationService} from './services/authentication.service.client';
+import {SortableDirective} from "../../directives/sortable.directive";
 
 @NgModule({
   // Declare components here
@@ -80,7 +81,8 @@ import {AuthenticationService} from './services/authentication.service.client';
     WidgetDispTextComponent,
     WidgetHtmlComponent,
     WidgetTextComponent,
-    FlickrImageSearchComponent
+    FlickrImageSearchComponent,
+    SortableDirective
   ],
   imports: [
     BrowserModule,
@@ -89,6 +91,7 @@ import {AuthenticationService} from './services/authentication.service.client';
     Routing,
     QuillEditorModule
   ],
+
   // Client Side services here
   providers: [TestService, AuthenticationService, FlickrService, UserService,
     WebsiteService, PageService, WidgetService, SharedService],

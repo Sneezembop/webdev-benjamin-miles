@@ -21,7 +21,7 @@ export class FlickrService {
 
   key = '7e01cffac2224b8c92b7f9e525cf93eb';
   secret = '33c330d555c58b78';
-  urlBase = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=API_KEY&text=TEXT';
+  urlBase = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=API_KEY&text=TEXT&safe_search=1';
 
 
   searchPhotos(searchTerm: any) {

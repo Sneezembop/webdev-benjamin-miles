@@ -2,29 +2,28 @@
 
 module.exports = function (app) {
 
-  var UserModel = require("../../model/user/user.model.server");
+  var UserModel = require('../../model/user/user.model.server');
   var passport = require('passport');
   var LocalStrategy = require('passport-local').Strategy;
   var FacebookStrategy = require('passport-facebook').Strategy;
-  var bcrypt = require("bcrypt-nodejs");
+  var bcrypt = require('bcrypt-nodejs');
 
-  var baseUrl = 'localhost:3100';
 
   app.post  ('/api/login', passport.authenticate('local'), login);
-  app.post("/api/user", createUser);
-  app.put("/api/user/:userId", updateUser);
-  app.get("/api/user/:userId", findUserById);
-  app.get("/api/user", findUsers);
-  app.delete("/api/user/:userId", deleteUser);
+  app.post('/api/user', createUser);
+  app.put('/api/user/:userId', updateUser);
+  app.get('/api/user/:userId', findUserById);
+  app.get('/api/user', findUsers);
+  app.delete('/api/user/:userId', deleteUser);
   app.post('/api/register', register);
   app.post('/api/logout', logout);
   app.post('/api/loggedIn', loggedIn);
-  app.get ('/facebook/login',
+  app.get ('/api/facebook/login',
     passport.authenticate('facebook', { scope : 'email' }));
-  app.get ('/facebook/oauth2callback',
+  app.get ('/api/facebook/oauth2callback',
     passport.authenticate('facebook', {
-      successRedirect: baseUrl +'/profile',
-      failureRedirect: baseUrl + '/login'
+      successRedirect: '/profile',
+      failureRedirect: '/login'
     }));
 
   function loggedIn(req, res) {
@@ -59,7 +58,7 @@ module.exports = function (app) {
   }
 
   function findUserById(req, res) {
-    //console.log("find user by id request made it to server");
+    //console.log('find user by id request made it to server');
     var userId = req.params['userId'];
     UserModel.findUserById(userId).then(function (user) {
       res.json(user);
@@ -69,7 +68,7 @@ module.exports = function (app) {
 
   function createUser(req, res) {
     UserModel.createUser(req.body).then(function (user) {
-      // console.log("got something!");
+      // console.log('got something!');
       // console.log(user.toString());
       res.json(user);
     });
@@ -161,10 +160,11 @@ module.exports = function (app) {
   }
 
   // comment this out later
+  /*
   process.env.FACEBOOK_CLIENT_ID = '322605294922617';
    process.env.FACEBOOK_CLIENT_SECRET = '0d8db32f95dac1ed9dbb042246038ed4';
-  process.env.FACEBOOK_CALLBACK_URL = '\/facebook\/oauth2callback';
-
+  process.env.FACEBOOK_CALLBACK_URL = 'http://localhost:3100/api/facebook/oauth2callback';
+  */
 
   var facebookConfig = {
     clientID     : process.env.FACEBOOK_CLIENT_ID,
@@ -181,10 +181,10 @@ module.exports = function (app) {
       .then(function(user) {
       if(user) { return done(null, user); } // already in db
       else { // if not, insert into db using profile info
-        var names = profile.displayName.split(" ");
+        var names = profile.displayName.split(' ');
         var newFacebookUser = { lastName:  names[1],
           firstName: names[0],
-          email:     profile.emails ? profile.emails[0].value:"",
+          email:     profile.emails ? profile.emails[0].value:'',
           facebook: { id:    profile.id, token: token }
         };
         return userModel.createUser(newFacebookUser);

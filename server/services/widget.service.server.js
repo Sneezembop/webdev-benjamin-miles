@@ -11,6 +11,19 @@ module.exports = function (app) {
   app.get("/api/page/:pageId/widget", findWidgetsByPageId);
   app.get("/api/widget/:widgetId", findWidgetById);
   app.delete("/api/widget/:widgetId", deleteWidget);
+  app.put("/api/page/:pageId/widget", sortWidgets);
+
+  function sortWidgets(req,res) {
+    var pageId = req.params['pageId'];
+    var start = req.query['initial'];
+    var stop = req.query['final'];
+    // console.log(pageId + ' ' + start + ' ' + stop);
+
+    WidgetModel.reorderWidget(pageId, start, stop).then(function(widgets) {
+      res.json(widgets);
+    });
+
+  }
 
 
   function createWidget(req, res) {

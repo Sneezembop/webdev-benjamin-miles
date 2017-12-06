@@ -45,13 +45,26 @@ function deleteWidget(widgetId) {
         var i = page.widgets.indexOf(widget);
         page.widgets.splice(i, 1);
         return page.save();
+
+        });
       });
     });
-  });
 }
 
 function reorderWidget(pageId, start, end) {
-  //don't worry about this yet.
+  console.log(start + ' ' + end);
+  return PageModel.findPageById(pageId).then(function(page) {
+    console.log(page.widgets);
+    page.widgets.splice(start,0, page.widgets.splice(end,1)[0]);
+    console.log(page.widgets);
+    return page.save(function(err) {
+      if (err) {
+        console.log(err);
+      }
+    });
+  }).then(function(page) {
+    return page.widgets;
+  });
 }
 
 
