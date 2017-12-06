@@ -1,8 +1,14 @@
+
+
 module.exports = function (app) {
 
   var UserModel = require("../../model/user/user.model.server");
   var passport = require('passport');
   var LocalStrategy = require('passport-local').Strategy;
+  var FacebookStrategy = require('passport-facebook').Strategy;
+  var bcrypt = require("bcrypt-nodejs");
+
+  var baseUrl = 'localhost:3100';
 
   app.post  ('/api/login', passport.authenticate('local'), login);
   app.post("/api/user", createUser);
@@ -13,6 +19,13 @@ module.exports = function (app) {
   app.post('/api/register', register);
   app.post('/api/logout', logout);
   app.post('/api/loggedIn', loggedIn);
+  app.get ('/facebook/login',
+    passport.authenticate('facebook', { scope : 'email' }));
+  app.get ('/facebook/oauth2callback',
+    passport.authenticate('facebook', {
+      successRedirect: baseUrl +'/profile',
+      failureRedirect: baseUrl + '/login'
+    }));
 
   function loggedIn(req, res) {
     if(req.isAuthenticated()) {
@@ -29,6 +42,7 @@ module.exports = function (app) {
 
   function register(req, res) {
     var user = req.body;
+    user.password = bcrypt.hashSync(user.password);
     UserModel
       .createUser(user)
       .then(function(user){
@@ -66,6 +80,7 @@ module.exports = function (app) {
   }
 
   function findUserByUsernameAndPassword(username,password) {
+    password = bcrypt.hashSync(password);
     return UserModel.findUserByCredentials(username, password);
   }
 
@@ -145,5 +160,42 @@ module.exports = function (app) {
       );
   }
 
+  // comment this out later
+  process.env.FACEBOOK_CLIENT_ID = '322605294922617';
+   process.env.FACEBOOK_CLIENT_SECRET = '0d8db32f95dac1ed9dbb042246038ed4';
+  process.env.FACEBOOK_CALLBACK_URL = '\/facebook\/oauth2callback';
+
+
+  var facebookConfig = {
+    clientID     : process.env.FACEBOOK_CLIENT_ID,
+    clientSecret : process.env.FACEBOOK_CLIENT_SECRET,
+    callbackURL  : process.env.FACEBOOK_CALLBACK_URL
+  };
+  passport.use(
+    new FacebookStrategy(facebookConfig, facebookStrategy));
+
+  function facebookStrategy(token, refreshToken,
+                            profile, done) {
+    UserModel
+      .findUserByFacebookId(profile.id)
+      .then(function(user) {
+      if(user) { return done(null, user); } // already in db
+      else { // if not, insert into db using profile info
+        var names = profile.displayName.split(" ");
+        var newFacebookUser = { lastName:  names[1],
+          firstName: names[0],
+          email:     profile.emails ? profile.emails[0].value:"",
+          facebook: { id:    profile.id, token: token }
+        };
+        return userModel.createUser(newFacebookUser);
+      }
+    })
+
+      .then(
+      function(user){
+        return done(null, user);
+      }
+    );
+  }
 
 };
