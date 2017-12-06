@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {WidgetService} from '../../../services/widget.service.client';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-widget-new',
@@ -15,8 +16,10 @@ export class WidgetNewComponent implements OnInit {
   userId: string;
   websiteId: string;
   pageId: string;
+  user: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private widgetService: WidgetService, private router: Router) { }
+  constructor(private sharedService: SharedService,
+              private activatedRoute: ActivatedRoute, private widgetService: WidgetService, private router: Router) { }
 
   ngOnInit() {
     this.widget = {};
@@ -24,7 +27,8 @@ export class WidgetNewComponent implements OnInit {
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
           this.widget.pageId = this.pageId;
@@ -36,7 +40,7 @@ export class WidgetNewComponent implements OnInit {
     // alert(this.widget.name + ' ' + this.widget.pageId);
     this.widgetService.createWidget(this.pageId, this.widget).subscribe((widget: any) => {
       this.router.navigate(
-        ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+        ['/website', this.websiteId, 'page', this.pageId, 'widget']);
     });
 
   }

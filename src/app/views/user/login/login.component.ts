@@ -24,8 +24,19 @@ export class LoginComponent implements OnInit {
   constructor(private userService: UserService, private sharedService: SharedService, private router: Router) {
   }
 
-
   login() {
+    this.username = this.loginForm.value.username;
+    this.password = this.loginForm.value.password;
+    this.userService
+      .login(this.username, this.password)
+      .subscribe((user) => {
+        this.sharedService.user = user;
+        this.router.navigate(['/profile']);
+      });
+  }
+
+
+  login_old() {
 
     // fetching data from loginForm
     this.username = this.loginForm.value.username;

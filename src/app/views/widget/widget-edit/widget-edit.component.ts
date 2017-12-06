@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {WidgetService} from '../../../services/widget.service.client';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-widget-edit',
@@ -10,20 +11,24 @@ import {WidgetService} from '../../../services/widget.service.client';
 export class WidgetEditComponent implements OnInit {
   widget: any;
   userId: string;
+  user: any;
   websiteId: string;
   pageId: string;
   widgetType: string;
   widgetId: string;
   widgetReady = false;
 
-  constructor(private activatedRoute: ActivatedRoute, private widgetService: WidgetService, private router: Router) { }
+  constructor(private sharedService: SharedService,
+              private activatedRoute: ActivatedRoute,
+              private widgetService: WidgetService, private router: Router) { }
 
   ngOnInit() {
     this.widgetReady = false;
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
           this.widgetId = params['wgid'];
@@ -41,14 +46,14 @@ export class WidgetEditComponent implements OnInit {
   updateWidget() {
     this.widgetService.updateWidget(this.widgetId, this.widget).subscribe((widget: any) => {
       this.router.navigate(
-        ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+        ['/website', this.websiteId, 'page', this.pageId, 'widget']);
     });
   }
 
   deleteWidget() {
     this.widgetService.deleteWidget(this.widgetId).subscribe((widget: any) => {
       this.router.navigate(
-        ['/user', this.userId, 'website', this.websiteId, 'page', this.pageId, 'widget']);
+        ['/website', this.websiteId, 'page', this.pageId, 'widget']);
     });
   }
 

@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {WebsiteService} from '../../../services/website.service.client';
 import {NgForm} from '@angular/forms';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-website-edit',
@@ -11,6 +12,7 @@ import {NgForm} from '@angular/forms';
 export class WebsiteEditComponent implements OnInit {
   @ViewChild('f') submitForm: NgForm;
 
+  user: any;
   userId: string;
   websiteId: string;
   errorFlag: boolean;
@@ -18,13 +20,15 @@ export class WebsiteEditComponent implements OnInit {
   webname: string;
   description: string;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private websiteService: WebsiteService) { }
+  constructor(private sharedService: SharedService, private router: Router,
+              private activatedRoute: ActivatedRoute, private websiteService: WebsiteService) { }
 
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
           this.websiteId = params['wid'];
           this.websiteService.findWebsiteById(this.websiteId).subscribe((website: any) => {
             this.webname = website.name;
@@ -42,13 +46,13 @@ export class WebsiteEditComponent implements OnInit {
     const tempSite = {_id: this.websiteId, name: this.webname,
       developerId: this.userId, description: this.description};
     this.websiteService.updateWebsite(this.websiteId, tempSite).subscribe((website: any) => {
-      this.router.navigate(['/user', this.userId, 'website']);
+      this.router.navigate(['/website']);
     });
 
   }
   deleteWebsite() {
     this.websiteService.deleteWebsite(this.websiteId).subscribe((website: any) => {
-      this.router.navigate(['/user', this.userId, 'website']);
+      this.router.navigate(['/website']);
     });
   }
 

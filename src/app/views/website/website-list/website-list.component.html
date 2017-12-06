@@ -3,10 +3,10 @@
 
     <div *ngFor="let website of websites">
       <li class="list-group-item borderless text-bold">
-        <a routerLink="/user/{{userId}}/website/{{website._id}}/page" class="navbar-link">
+        <a routerLink="/website/{{website._id}}/page" class="navbar-link">
           {{website.name}}
         </a>
-        <a routerLink="/user/{{userId}}/website/{{website._id}}" class="navbar-link">
+        <a routerLink="/website/{{website._id}}" class="navbar-link">
           <span class="glyphicon glyphicon-cog pull-right"></span>
         </a>
       </li>

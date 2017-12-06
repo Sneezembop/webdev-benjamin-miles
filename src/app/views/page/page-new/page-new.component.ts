@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PageService} from '../../../services/page.service.client';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-page-new',
@@ -18,15 +19,19 @@ export class PageNewComponent implements OnInit {
   errorMsg: string;
   pagename: string;
   description: string;
+  user: any;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private pageService: PageService) { }
+  constructor(private sharedService: SharedService,
+              private router: Router, private activatedRoute: ActivatedRoute,
+              private pageService: PageService) { }
 
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
           this.websiteId = params['wid'];
-          this.userId = params['uid'];
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
         }
       );
   }
@@ -36,7 +41,7 @@ export class PageNewComponent implements OnInit {
     this.description = this.submitForm.value.description;
     const tempPage = { name: this.pagename, websiteId: this.websiteId, description: this.description };
     this.pageService.createPage(this.websiteId, tempPage).subscribe((page: any) => {
-      this.router.navigate(['/user', this.userId, 'website', this.websiteId, 'page']);
+      this.router.navigate(['/website', this.websiteId, 'page']);
     });
   }
 }

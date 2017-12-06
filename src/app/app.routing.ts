@@ -18,7 +18,8 @@ import {WidgetEditComponent} from './views/widget/widget-edit/widget-edit.compon
 import {PageEditComponent} from './views/page/page-edit/page-edit.component';
 import {PageNewComponent} from './views/page/page-new/page-new.component';
 import {PageHomeComponent} from './views/page/page-home/page-home.component';
-import {FlickrImageSearchComponent} from "./views/widget/widget-image/flickr-image-search/flickr-image-search.component";
+import {FlickrImageSearchComponent} from './views/widget/widget-image/flickr-image-search/flickr-image-search.component';
+import {AuthenticationService} from './services/authentication.service.client';
 
 
 
@@ -28,17 +29,18 @@ const APP_ROUTES: Routes = [
   {path: 'test', component: TestComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'user/:uid', component: ProfileComponent},
-  {path: 'user/:uid/website', component: WebsiteHomeComponent},
-  {path: 'user/:uid/website/new', component: WebsiteNewComponent},
-  {path: 'user/:uid/website/:wid', component: WebsiteEditComponent},
-  {path: 'user/:uid/website/:wid/page', component: PageHomeComponent},
-  {path: 'user/:uid/website/:wid/page/new', component: PageNewComponent},
-  {path: 'user/:uid/website/:wid/page/:pid', component: PageEditComponent},
-  {path: 'user/:uid/website/:wid/page/:pid/widget', component: WidgetHomeComponent},
-  {path: 'user/:uid/website/:wid/page/:pid/widget/new', component: WidgetNewComponent},
-  {path: 'user/:uid/website/:wid/page/:pid/widget/:wgid', component: WidgetEditComponent},
-  {path: 'user/:uid/website/:wid/page/:pid/widget/:wgid/flickr', component: FlickrImageSearchComponent}
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthenticationService]},
+  {path: 'website', component: WebsiteHomeComponent, canActivate: [AuthenticationService]},
+  {path: 'website/new', component: WebsiteNewComponent, canActivate: [AuthenticationService]},
+  {path: 'website/:wid', component: WebsiteEditComponent, canActivate: [AuthenticationService]},
+  {path: 'website/:wid/page', component: PageHomeComponent, canActivate: [AuthenticationService]},
+  {path: 'website/:wid/page/new', component: PageNewComponent, canActivate: [AuthenticationService]},
+  {path: 'website/:wid/page/:pid', component: PageEditComponent, canActivate: [AuthenticationService]},
+  {path: 'website/:wid/page/:pid/widget', component: WidgetHomeComponent, canActivate: [AuthenticationService]},
+  {path: 'website/:wid/page/:pid/widget/new', component: WidgetNewComponent, canActivate: [AuthenticationService]},
+  {path: 'website/:wid/page/:pid/widget/:wgid', component: WidgetEditComponent, canActivate: [AuthenticationService]},
+  {path: 'website/:wid/page/:pid/widget/:wgid/flickr',
+    component: FlickrImageSearchComponent, canActivate: [AuthenticationService]}
 
 ];
 

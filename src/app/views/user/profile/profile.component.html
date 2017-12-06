@@ -1,5 +1,5 @@
 <form (ngSubmit)="updateUser()" #f="ngForm">
-<app-simple-header headerName="Profile" okLink="/user/{{userId}}" backLink="/login" glyphType="ok"></app-simple-header>
+<app-simple-header headerName="Profile" okLink="/profile" backLink="/login" glyphType="ok"></app-simple-header>
 
 <!-- page content -->
 <div class="container-fluid">
@@ -45,8 +45,8 @@
                class="form-control"/>
       </div>
 
-    <a class="btn btn-primary" routerLink="website">Websites</a>
-    <a class="btn btn-danger" routerLink="">Logout</a>
+    <a class="btn btn-primary" routerLink="/website">Websites</a>
+    <button class="btn btn-danger" (click)="logout()">Logout</button>
   </div>
 </div>
 </form>

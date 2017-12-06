@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-widget-chooser',
@@ -9,19 +10,21 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class WidgetChooserComponent implements OnInit {
   @Input()
     widget: any;
-
+  user: any;
   userId: string;
   websiteId: string;
   pageId: string;
 
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private sharedService: SharedService,
+              private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
         }

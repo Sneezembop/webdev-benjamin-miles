@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {WebsiteService} from '../../../services/website.service.client';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-website-new',
@@ -10,20 +11,23 @@ import {WebsiteService} from '../../../services/website.service.client';
 })
 export class WebsiteNewComponent implements OnInit {
   @ViewChild('f') submitForm: NgForm;
-
+  user: any;
   userId: string;
   errorFlag: boolean;
   errorMsg: string;
   webname: string;
   description: string;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private websiteService: WebsiteService) { }
+  constructor(private sharedService: SharedService,
+              private router: Router, private activatedRoute: ActivatedRoute,
+              private websiteService: WebsiteService) { }
 
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
         }
       );
   }
@@ -33,7 +37,7 @@ export class WebsiteNewComponent implements OnInit {
     this.description = this.submitForm.value.description;
     const tempSite = {name: this.webname, developerId: this.userId, description: this.description};
     this.websiteService.createWebsite(this.userId, tempSite).subscribe((site: any) => {
-      this.router.navigate(['/user', this.userId, 'website']);
+      this.router.navigate(['/website']);
     });
   }
 

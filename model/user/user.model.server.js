@@ -14,7 +14,7 @@ function findUserByCredentials(username, password) {
 }
 
 function createUser(user) {
-  console.log("creating user");
+  //console.log("creating user");
   return UserModel.create(user);
 }
 

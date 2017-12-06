@@ -4,11 +4,45 @@ module.exports = function (app) {
   var passport = require('passport');
   var LocalStrategy = require('passport-local').Strategy;
 
+  app.post  ('/api/login', passport.authenticate('local'), login);
   app.post("/api/user", createUser);
   app.put("/api/user/:userId", updateUser);
   app.get("/api/user/:userId", findUserById);
   app.get("/api/user", findUsers);
   app.delete("/api/user/:userId", deleteUser);
+  app.post('/api/register', register);
+  app.post('/api/logout', logout);
+  app.post('/api/loggedIn', loggedIn);
+
+  function loggedIn(req, res) {
+    if(req.isAuthenticated()) {
+      res.json(req.user);
+    } else {
+      res.send('0');
+    }
+  }
+
+  function logout(req, res) {
+    req.logOut();
+    res.send(200);
+  }
+
+  function register(req, res) {
+    var user = req.body;
+    UserModel
+      .createUser(user)
+      .then(function(user){
+        req.login(user, function(err) {
+          res.json(user);
+        });
+      });
+  }
+
+
+  function login(req, res) {
+    var user = req.user;
+    res.json(user);
+  }
 
   function findUserById(req, res) {
     //console.log("find user by id request made it to server");

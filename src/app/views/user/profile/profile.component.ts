@@ -1,7 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {UserService} from '../../../services/user.service.client';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-profile',
@@ -20,20 +21,21 @@ export class ProfileComponent implements OnInit {
   fname: string;
   lname: string;
 
-  constructor(private userService: UserService, private activatedRoute: ActivatedRoute) { }
+  constructor(private sharedService: SharedService,
+              private userService: UserService,
+              private activatedRoute: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
-          this.userService.findUserById(this.userId).subscribe((user: any) => {
-            this.user = user;
-            this.username = user.username;
-            this.email = user.email;
-            this.fname = user.firstName;
-            this.lname = user.lastName;
-          });
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
+            this.username = this.user.username;
+            this.email = this.user.email;
+            this.fname = this.user.firstName;
+            this.lname = this.user.lastName;
         }
       );
   }
@@ -41,10 +43,10 @@ export class ProfileComponent implements OnInit {
   updateUser() {
     // console.log('user update requested');
     // console.log(this.fname + ' ' + this.profileForm.value.firstName);
-    this.user.firstName = this.fname;
-    this.user.lastName = this.lname;
-    this.user.username = this.username;
-    this.user.email = this.email;
+    this.user.firstName = this.profileForm.value.fname;
+    this.user.lastName = this.profileForm.value.lname;
+    this.user.username = this.profileForm.value.username;
+    this.user.email = this.profileForm.value.email;
 
     this.userService.updateUser(this.userId, this.user).subscribe((user: any) => {
       if (user) {
@@ -54,5 +56,13 @@ export class ProfileComponent implements OnInit {
       }
     });
   }
+
+  logout() {
+    this.userService.logout()
+      .subscribe((status) => {
+        this.router.navigate(['/login']);
+      });
+  }
+
 
 }

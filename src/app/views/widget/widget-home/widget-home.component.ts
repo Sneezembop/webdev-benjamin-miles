@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {WidgetService} from '../../../services/widget.service.client';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-widget-home',
@@ -13,14 +14,17 @@ export class WidgetHomeComponent implements OnInit {
   websiteId: string;
   pageId: string;
   widgets = [{}];
+  user: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private widgetService: WidgetService) { }
+  constructor(private sharedService: SharedService, private activatedRoute: ActivatedRoute,
+              private router: Router, private widgetService: WidgetService) { }
 
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
           this.widgetService.findWidgetsByPageId(this.pageId).subscribe((widgets: any) => {

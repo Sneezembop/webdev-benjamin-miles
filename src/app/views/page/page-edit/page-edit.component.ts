@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PageService} from '../../../services/page.service.client';
+import {SharedService} from '../../../services/shared.service.client';
 
 
 @Component({
@@ -20,15 +21,17 @@ export class PageEditComponent implements OnInit {
   errorMsg: string;
   pagename: string;
   description: string;
+  user: any;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute,
+  constructor(private sharedService: SharedService, private router: Router, private activatedRoute: ActivatedRoute,
               private pageService: PageService) { }
 
   ngOnInit() {
     this.activatedRoute.params
       .subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.user = this.sharedService.user || {};
+          this.userId = this.user._id;
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
           this.pageService.findPageById(this.pageId).subscribe((page: any) => {
@@ -46,13 +49,13 @@ export class PageEditComponent implements OnInit {
     const tempPage = { _id: this.pageId, name: this.pagename,
       websiteId: this.websiteId, description: this.description };
     this.pageService.updatePage(this.pageId, tempPage).subscribe((page: any) => {
-      this.router.navigate(['/user', this.userId, 'website', this.websiteId, 'page']);
+      this.router.navigate(['/website', this.websiteId, 'page']);
     });
 
   }
   deletePage() {
     this.pageService.deletePage(this.pageId).subscribe((page: any) => {
-      this.router.navigate(['/user', this.userId, 'website', this.websiteId, 'page']);
+      this.router.navigate(['/website', this.websiteId, 'page']);
     });
 
   }
