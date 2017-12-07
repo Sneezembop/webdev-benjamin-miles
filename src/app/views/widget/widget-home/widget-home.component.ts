@@ -36,7 +36,7 @@ export class WidgetHomeComponent implements OnInit {
   }
   onIndexChange(event) {
     this.widgetService.reorderWidget(this.pageId, event.startIndex, event.endIndex).subscribe((widgets: any  ) => {
-    this.widgets = widgets;
+    // this.widgets = widgets;
     });
 
   }

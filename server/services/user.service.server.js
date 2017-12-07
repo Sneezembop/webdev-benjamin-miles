@@ -9,6 +9,27 @@ module.exports = function (app) {
   var bcrypt = require('bcrypt-nodejs');
 
 
+
+  // comment this out later
+   /*
+  process.env.FACEBOOK_CLIENT_ID = '322605294922617';
+  process.env.FACEBOOK_CLIENT_SECRET = '0d8db32f95dac1ed9dbb042246038ed4';
+  process.env.FACEBOOK_CALLBACK_URL = 'http://localhost:3100/api/facebook/oauth2callback';
+  // */
+
+  var facebookConfig = {
+    clientID     : process.env.FACEBOOK_CLIENT_ID,
+    clientSecret : process.env.FACEBOOK_CLIENT_SECRET,
+    callbackURL  : process.env.FACEBOOK_CALLBACK_URL
+  };
+  passport.use(
+    new FacebookStrategy(facebookConfig, facebookStrategy));
+
+  passport.use(new LocalStrategy(localStrategy));
+  passport.deserializeUser(deserializeUser);
+  passport.serializeUser(serializeUser);
+
+
   app.post  ('/api/login', passport.authenticate('local'), login);
   app.post('/api/user', createUser);
   app.put('/api/user/:userId', updateUser);
@@ -22,8 +43,8 @@ module.exports = function (app) {
     passport.authenticate('facebook', { scope : 'email' }));
   app.get ('/api/facebook/oauth2callback',
     passport.authenticate('facebook', {
-      successRedirect: '/profile',
-      failureRedirect: '/login'
+      successRedirect: 'http://localhost:4200/profile',
+      failureRedirect: 'http://localhost:4200/login'
     }));
 
   function loggedIn(req, res) {
@@ -118,14 +139,14 @@ module.exports = function (app) {
     })
   }
 
-  passport.serializeUser(serializeUser);
+
 
   function serializeUser(user, done) {
     done(null, user);
   }
 
 
-  passport.deserializeUser(deserializeUser);
+
 
   function deserializeUser(user, done) {
     UserModel
@@ -140,7 +161,7 @@ module.exports = function (app) {
       );
   }
 
-  passport.use(new LocalStrategy(localStrategy));
+
 
   function localStrategy(username, password, done) {
     UserModel
@@ -159,27 +180,15 @@ module.exports = function (app) {
       );
   }
 
-  // comment this out later
-  /*
-  process.env.FACEBOOK_CLIENT_ID = '322605294922617';
-   process.env.FACEBOOK_CLIENT_SECRET = '0d8db32f95dac1ed9dbb042246038ed4';
-  process.env.FACEBOOK_CALLBACK_URL = 'http://localhost:3100/api/facebook/oauth2callback';
-  */
 
-  var facebookConfig = {
-    clientID     : process.env.FACEBOOK_CLIENT_ID,
-    clientSecret : process.env.FACEBOOK_CLIENT_SECRET,
-    callbackURL  : process.env.FACEBOOK_CALLBACK_URL
-  };
-  passport.use(
-    new FacebookStrategy(facebookConfig, facebookStrategy));
 
   function facebookStrategy(token, refreshToken,
                             profile, done) {
     UserModel
       .findUserByFacebookId(profile.id)
       .then(function(user) {
-      if(user) { return done(null, user); } // already in db
+         if(user) { return done(null, user); } // already in db
+      // if(user) { return user; } // already in db
       else { // if not, insert into db using profile info
         var names = profile.displayName.split(' ');
         var newFacebookUser = { lastName:  names[1],
@@ -187,7 +196,7 @@ module.exports = function (app) {
           email:     profile.emails ? profile.emails[0].value:'',
           facebook: { id:    profile.id, token: token }
         };
-        return userModel.createUser(newFacebookUser);
+        return UserModel.createUser(newFacebookUser);
       }
     })
 
