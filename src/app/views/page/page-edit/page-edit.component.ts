@@ -44,14 +44,20 @@ export class PageEditComponent implements OnInit {
   }
 
   updatePage() {
-    this.pagename = this.submitForm.value.webname;
-    this.description = this.submitForm.value.description;
-    const tempPage = { _id: this.pageId, name: this.pagename,
-      websiteId: this.websiteId, description: this.description };
-    this.pageService.updatePage(this.pageId, tempPage).subscribe((page: any) => {
-      this.router.navigate(['/website', this.websiteId, 'page']);
-    });
-
+    if ((this.submitForm.value.pagename !== '') && (this.submitForm.value.pagename !== null)) {
+      this.pagename = this.submitForm.value.webname;
+      this.description = this.submitForm.value.description;
+      const tempPage = {
+        _id: this.pageId, name: this.pagename,
+        websiteId: this.websiteId, description: this.description
+      };
+      this.pageService.updatePage(this.pageId, tempPage).subscribe((page: any) => {
+        this.router.navigate(['/website', this.websiteId, 'page']);
+      });
+    }else {
+        this.errorFlag = true;
+        this.errorMsg = 'needs a name!';
+    }
   }
   deletePage() {
     this.pageService.deletePage(this.pageId).subscribe((page: any) => {

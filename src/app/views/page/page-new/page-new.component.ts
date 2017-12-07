@@ -37,11 +37,17 @@ export class PageNewComponent implements OnInit {
   }
 
   createPage() {
-    this.pagename = this.submitForm.value.pagename;
-    this.description = this.submitForm.value.description;
-    const tempPage = { name: this.pagename, websiteId: this.websiteId, description: this.description };
-    this.pageService.createPage(this.websiteId, tempPage).subscribe((page: any) => {
-      this.router.navigate(['/website', this.websiteId, 'page']);
-    });
+    if ((this.submitForm.value.pagename !== '') && (this.submitForm.value.pagename !== null)) {
+      this.pagename = this.submitForm.value.pagename;
+      this.description = this.submitForm.value.description;
+      const tempPage = { name: this.pagename, websiteId: this.websiteId, description: this.description };
+      this.pageService.createPage(this.websiteId, tempPage).subscribe((page: any) => {
+        this.router.navigate(['/website', this.websiteId, 'page']);
+      });
+    } else {
+      this.errorFlag = true;
+      this.errorMsg = 'needs a name!';
+    }
+
   }
 }

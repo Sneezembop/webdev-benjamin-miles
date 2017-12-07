@@ -52,16 +52,12 @@ function deleteWidget(widgetId) {
 }
 
 function reorderWidget(pageId, start, end) {
-  console.log(start + ' ' + end);
+  // console.log(start + ' ' + end);
   return PageModel.findPageById(pageId).then(function(page) {
-    console.log(page.widgets);
+    // console.log(page.widgets);
     page.widgets.splice(start,0, page.widgets.splice(end,1)[0]);
-    console.log(page.widgets);
-    return page.save(function(err) {
-      if (err) {
-        console.log(err);
-      }
-    });
+    // console.log(page.widgets);
+    page.save()
   }).then(function(page) {
     return page.widgets;
   });

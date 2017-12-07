@@ -17,6 +17,8 @@ export class WidgetEditComponent implements OnInit {
   widgetType: string;
   widgetId: string;
   widgetReady = false;
+  errorMsg: string;
+  errorFlag: boolean;
 
   constructor(private sharedService: SharedService,
               private activatedRoute: ActivatedRoute,
@@ -44,10 +46,15 @@ export class WidgetEditComponent implements OnInit {
   }
 
   updateWidget() {
+    if ((this.widget.name !== '') && (this.widget.name !== null)) {
     this.widgetService.updateWidget(this.widgetId, this.widget).subscribe((widget: any) => {
       this.router.navigate(
         ['/website', this.websiteId, 'page', this.pageId, 'widget']);
     });
+      } else {
+      this.errorMsg = 'needs a name';
+      this.errorFlag = true;
+    }
   }
 
   deleteWidget() {

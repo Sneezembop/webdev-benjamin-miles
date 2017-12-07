@@ -11,11 +11,6 @@ module.exports = function (app) {
 
 
   // comment this out later
-   /*
-  process.env.FACEBOOK_CLIENT_ID = '322605294922617';
-  process.env.FACEBOOK_CLIENT_SECRET = '0d8db32f95dac1ed9dbb042246038ed4';
-  process.env.FACEBOOK_CALLBACK_URL = 'http://localhost:3100/api/facebook/oauth2callback';
-  // */
 
   var facebookConfig = {
     clientID     : process.env.FACEBOOK_CLIENT_ID,

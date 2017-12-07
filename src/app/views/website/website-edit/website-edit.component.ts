@@ -41,13 +41,20 @@ export class WebsiteEditComponent implements OnInit {
   }
 
   updateWebsite() {
-    this.webname = this.submitForm.value.webname;
-    this.description = this.submitForm.value.description;
-    const tempSite = {_id: this.websiteId, name: this.webname,
-      developerId: this.userId, description: this.description};
-    this.websiteService.updateWebsite(this.websiteId, tempSite).subscribe((website: any) => {
-      this.router.navigate(['/website']);
-    });
+    if ((this.submitForm.value.webname !== '') && (this.submitForm.value.webname !== null)) {
+      this.webname = this.submitForm.value.webname;
+      this.description = this.submitForm.value.description;
+      const tempSite = {
+        _id: this.websiteId, name: this.webname,
+        developerId: this.userId, description: this.description
+      };
+      this.websiteService.updateWebsite(this.websiteId, tempSite).subscribe((website: any) => {
+        this.router.navigate(['/website']);
+      });
+    } else {
+      this.errorMsg = 'needs a name';
+      this.errorFlag = true;
+    }
 
   }
   deleteWebsite() {

@@ -17,6 +17,8 @@ export class WidgetNewComponent implements OnInit {
   websiteId: string;
   pageId: string;
   user: any;
+  errorMsg: string;
+  errorFlag: boolean;
 
   constructor(private sharedService: SharedService,
               private activatedRoute: ActivatedRoute, private widgetService: WidgetService, private router: Router) { }
@@ -32,16 +34,21 @@ export class WidgetNewComponent implements OnInit {
           this.websiteId = params['wid'];
           this.pageId = params['pid'];
           this.widget.pageId = this.pageId;
+          this.widget.name = '';
         }
       );
   }
 
   createWidget() {
-    // alert(this.widget.name + ' ' + this.widget.pageId);
-    this.widgetService.createWidget(this.pageId, this.widget).subscribe((widget: any) => {
-      this.router.navigate(
-        ['/website', this.websiteId, 'page', this.pageId, 'widget']);
-    });
+    if ((this.widget.name !== '') && (this.widget.name !== null)) {
+      this.widgetService.createWidget(this.pageId, this.widget).subscribe((widget: any) => {
+        this.router.navigate(
+          ['/website', this.websiteId, 'page', this.pageId, 'widget']);
+      });
+    } else {
+      this.errorMsg = 'needs a name!';
+      this.errorFlag = true;
+    }
 
   }
 }

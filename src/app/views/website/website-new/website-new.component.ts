@@ -33,12 +33,17 @@ export class WebsiteNewComponent implements OnInit {
   }
 
   createWebsite() {
-    this.webname = this.submitForm.value.webname;
-    this.description = this.submitForm.value.description;
-    const tempSite = {name: this.webname, developerId: this.userId, description: this.description};
-    this.websiteService.createWebsite(this.userId, tempSite).subscribe((site: any) => {
-      this.router.navigate(['/website']);
-    });
+    if ((this.submitForm.value.webname !== '') && (this.submitForm.value.webname !== null)) {
+      this.webname = this.submitForm.value.webname;
+      this.description = this.submitForm.value.description;
+      const tempSite = {name: this.webname, developerId: this.userId, description: this.description};
+      this.websiteService.createWebsite(this.userId, tempSite).subscribe((site: any) => {
+        this.router.navigate(['/website']);
+      });
+    } else {
+      this.errorFlag = true;
+      this.errorMsg = 'needs a name!';
+    }
   }
 
 }

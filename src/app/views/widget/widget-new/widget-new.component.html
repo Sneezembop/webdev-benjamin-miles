@@ -6,6 +6,10 @@
 
     </div>
     <div class="col-sm-8">
+      <div *ngIf="errorFlag"
+           class="alert alert-danger">
+        {{errorMsg}}
+      </div>
       <div [ngSwitch]="widget.type">
 
         <div *ngSwitchCase="'HEADER'">
