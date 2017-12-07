@@ -43,8 +43,8 @@ module.exports = function (app) {
     passport.authenticate('facebook', { scope : 'email' }));
   app.get ('/api/facebook/oauth2callback',
     passport.authenticate('facebook', {
-      successRedirect: 'http://localhost:4200/profile',
-      failureRedirect: 'http://localhost:4200/login'
+      successRedirect: '/profile',
+      failureRedirect: '/login'
     }));
 
   function loggedIn(req, res) {
